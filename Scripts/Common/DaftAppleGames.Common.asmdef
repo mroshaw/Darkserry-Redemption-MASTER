@@ -1,0 +1,20 @@
+{
+    "name": "DaftAppleGames.Common",
+    "rootNamespace": "",
+    "references": [
+        "GUID:457756d89b35d2941b3e7b37b4ece6f1",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:f80572f9b7b06ae49b317abaf2ae34bb",
+        "GUID:c903b9a525d6b2f4396321b02ffc9eb2",
+        "GUID:53b232305ac70a342abefa41d2397656"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40f46466bdf27974c8e32bca825b70b0, type: 3}
+  m_Name: ProjectFolderSettings
+  m_EditorClassIdentifier: 
+  allProjectFolders:
+  - FolderPath: 
+    FolderName: _Project
+  - FolderPath: _Project
+    FolderName: Audio
+  - FolderPath: _Project/Audio
+    FolderName: Sound FX
+  - FolderPath: _Project/Audio
+    FolderName: Music
+  - FolderPath: _Project
+    FolderName: Animation
+  - FolderPath: _Project
+    FolderName: Materials
+  - FolderPath: _Project
+    FolderName: Meshes
+  - FolderPath: _Project
+    FolderName: Prefabs
+  - FolderPath: _Project/Prefabs
+    FolderName: Buildings
+  - FolderPath: _Project/Prefabs/Buildings
+    FolderName: Churches
+  - FolderPath: _Project/Prefabs/Buildings
+    FolderName: Houses
+  - FolderPath: _Project/Prefabs/Buildings
+    FolderName: Inns
+  - FolderPath: _Project/Prefabs/Buildings
+    FolderName: Shops
+  - FolderPath: _Project/Prefabs/Buildings
+    FolderName: Lighting
+  - FolderPath: _Project/Prefabs
+    FolderName: Landscape
+  - FolderPath: _Project
+    FolderName: Scenes
+  - FolderPath: _Project/Scenes
+    FolderName: MainGameScene
+  - FolderPath: _Project/Scenes
+    FolderName: GameCompleteScene
+  - FolderPath: _Project/Scenes
+    FolderName: WorkingScenes
+  - FolderPath: _Project
+    FolderName: Scripts
+  - FolderPath: _Project/Scripts
+    FolderName: 3rdParty
+  - FolderPath: _Project/Scripts
+    FolderName: Common
+  - FolderPath: _Project/Scripts/Common
+    FolderName: Buildings
+  - FolderPath: _Project/Scripts/Common
+    FolderName: Characters
+  - FolderPath: _Project/Scripts/Common
+    FolderName: Environment
+  - FolderPath: _Project/Scripts
+    FolderName: Editor
+  - FolderPath: _Project/Scripts/Editor
+    FolderName: Buildings
+  - FolderPath: _Project/Scripts/Editor
+    FolderName: Characters
+  - FolderPath: _Project/Scripts/Editor/Buildings
+    FolderName: Settings
+  - FolderPath: _Project/Scripts/Editor/Characters
+    FolderName: Settings
+  - FolderPath: _Project/Scripts/Editor
+    FolderName: ProjectSetup
+  - FolderPath: _Project
+    FolderName: Settings
+  - FolderPath: _Project/Settings
+    FolderName: Preset Settings
+  - FolderPath: _Project
+    FolderName: Textures
+  - FolderPath: _Project
+    FolderName: Terrains
+  - FolderPath: _Project/Scripts
+    FolderName: Game
