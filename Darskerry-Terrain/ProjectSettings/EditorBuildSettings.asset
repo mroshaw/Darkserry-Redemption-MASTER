@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/TestGaiaGPUI.unity
+    path: Assets/_Project/Scenes/TerrainTest.unity
+    guid: a8b7f2959c85fe441abe39d0216814a4
+  - enabled: 1
+    path: 
     guid: 8a411ffaebd2c3c4fae88ec83a72cc13
   - enabled: 1
     path: Assets/_Project/Scenes/MainMenuScene.unity
