@@ -4,6 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Untagged
+  - Respawn
+  - Finish
+  - EditorOnly
+  - MainCamera
+  - Player
+  - GameController
   - WallRun
   - Action
   - AutoCrouch
@@ -28,7 +35,7 @@ TagManager:
   - Zipline
   - PlayerUI
   - Collectable
-  - CoverPoint
+  - Coverpoint
   - Interactable
   - AIAction
   - Animal
@@ -58,11 +65,11 @@ TagManager:
   - CoverPoint
   - 
   - Animal
-  - 
-  - 
-  - 
-  - 
-  - 
+  - PW_VFX
+  - PW_Object_Small
+  - PW_Object_Medium
+  - PW_Object_Large
+  - Building
   - 
   - 
   - 
