@@ -15,9 +15,354 @@ MonoBehaviour:
   version: 1.0
   author: Iain Ollerenshaw
   description: Spawner DB for the Main Menu scene
-  timeOfDayData: []
+  timeOfDayData:
+  - timeOfDayName: All Day
+    startTime: 0
+    endTime: 23.99
   biomeSpawnData: []
-  areaSpawnData: []
+  areaSpawnData:
+  - areaName: Island Area
+    timeOfDaySpawns:
+      keys:
+      - All Day
+      values:
+      - spawnInfoData:
+        - spawnType: 0
+          prefab: {fileID: 4501010774903554383, guid: 3e25df346dd25f548a83ad005cd3bd05,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 4f18b2f4-896f-479a-93ae-b6f602fcb452
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 6124719799001108102, guid: 800b15a34e983d64eb0982c88eb8a964,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 2812576a-9a0e-45b5-80b6-a7718c37950b
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 8655324203638879299, guid: fca442990d85ff8488e9586c9da895a3,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 031e6256-3f83-444a-8744-dc3099cced3d
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 677287104318772064, guid: 2786f87a4018446459d0cc26f4229fba,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: c20efaa3-f0dd-4396-9600-2a6fee6ef75e
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 7295027623618940529, guid: eed6ca31f7444db429746b942c47d40d,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 368499d6-794a-4646-9163-ac8447df3ea7
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 2954697034714566064, guid: 543ac7ebcb863b24bae2fb8209f0038c,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 9e0d2024-feb9-4be5-952c-492b7c6f51fd
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 2808553311403740113, guid: 29cb2e46048262c4d895eb0d06664166,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: 6cbbea14-5c62-4be1-a3be-51c6f1462a65
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
+        - spawnType: 0
+          prefab: {fileID: 1276603574556218658, guid: 2efd9db3ec27b96439ee88d668522994,
+            type: 3}
+          herd: {fileID: 0}
+          probability: 70
+          populationCap: 10
+          ignorePlayerFOV: 0
+          reusable: 1
+          minScale: 0.7
+          maxScale: 1.1
+          overrideElevation: 0
+          minElevation: 0
+          maxElevation: 1000
+          overrideSlopeAngle: 0
+          minSlopeAngle: 0
+          maxSlopeAngle: 45
+          spawnInAir: 0
+          maxAltitude: 50
+          textureRules: []
+          weatherRules: []
+          seasonRules: []
+          questRules: []
+          proximityRules: []
+          disable: 0
+          spawnGuid: d0b6dfa9-8c6f-42a9-8845-d26aa1179f49
+          spawnAreaGuid: 623b2e81-bab6-46a7-9187-1173c668af4e
+          randomChance: 0
+          markPersistent: 0
+          textureSelected: 0
+          texRuleSelected: 0
+          weatherRuleSelected: 0
+          seasonRuleSelected: 0
+          questRuleSelected: 0
+          proximityRuleSelected: 0
+          texFilterFoldoutState: 0
+          weatherFilterFoldoutState: 0
+          seasonFilterFoldoutState: 0
+          questFilterFoldoutState: 0
+          proximityFilterFoldoutState: 0
+          proximitySpawnsFoldoutState: 0
+          hideSpawn: 0
+          showFilters: 1
   proximitySpawns:
     keys: []
     values: []
