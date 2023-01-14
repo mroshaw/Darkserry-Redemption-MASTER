@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
 namespace DaftAppleGames.Ui
@@ -6,7 +7,7 @@ namespace DaftAppleGames.Ui
     public class UiController : MonoBehaviour
     {
 
-        [Header("UI Configuration")]
+        [Header("UI Settings")]
         public GameObject uiPanel;
         public bool startWithUiOpen = false;
         public GameObject startSelectedGameObject;
@@ -18,12 +19,6 @@ namespace DaftAppleGames.Ui
         /// </summary>
         public virtual void Start()
         {
-            // Set the selected game object in Event System
-            if(startSelectedGameObject)
-            {
-                EventSystem.current.firstSelectedGameObject = startSelectedGameObject;
-            }
-
             // Start with UI in specified state
             SetUiState(startWithUiOpen);
         }
@@ -35,6 +30,7 @@ namespace DaftAppleGames.Ui
         {
             uiPanel.SetActive(true);
             isUiOpen = true;
+            EventSystem.current.SetSelectedGameObject(startSelectedGameObject);
         }
 
         /// <summary>

@@ -1,9 +1,10 @@
-using UnityEngine.Events;
-using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.UI
 {
-    public class UiButton : Button
+    public class UiButton : UiObject
     {
+
     }
 }
