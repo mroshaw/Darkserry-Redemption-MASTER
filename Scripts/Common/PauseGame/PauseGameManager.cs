@@ -34,6 +34,8 @@ namespace DaftAppleGames.PauseGame
             isPaused = true;
             Time.timeScale = 0.0f;
             Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+            Debug.Log($"Cursor should be visible!");
         }
 
         /// <summary>

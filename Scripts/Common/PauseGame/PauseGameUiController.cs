@@ -1,3 +1,4 @@
+using DaftAppleGames.GameControllers;
 using DaftAppleGames.Settings;
 using DaftAppleGames.Ui;
 using System.Collections;
@@ -9,11 +10,11 @@ namespace DaftAppleGames.PauseGame
 {
     public class PauseGameUiController : UiController
     {
-        [Header("Pause Key Config")]
+        [Header("Pause Key Settings")]
         public KeyCode pauseKey = KeyCode.Escape;
         public KeyCode altPauseKey = KeyCode.P;
 
-        [Header("UI Config")]
+        [Header("UI Settings")]
         public Button continueButton;
         public Button optionsButton;
         public Button loadButton;
@@ -31,6 +32,7 @@ namespace DaftAppleGames.PauseGame
         public override void Start()
         {
             _pauseGameManager = GetComponent<PauseGameManager>();
+
             InitControls();
             base.Start();
         }
@@ -77,6 +79,14 @@ namespace DaftAppleGames.PauseGame
         }
 
         /// <summary>
+        /// Fade back to the Main Menu scene
+        /// </summary>
+        public void GoToMainMenu()
+        {
+            GameController.LoadMainMenuScene();
+        }
+
+        /// <summary>
         /// Wait for the pause key
         /// </summary>
         private void Update()
@@ -84,6 +94,8 @@ namespace DaftAppleGames.PauseGame
             if(Input.GetKeyDown(pauseKey) || Input.GetKeyDown(altPauseKey))
             {
                 bool isPaused = _pauseGameManager.isPaused;
+
+                Debug.Log($"Paused: {isPaused}");
 
                 // Only pause if not paused
                 if(!isPaused)

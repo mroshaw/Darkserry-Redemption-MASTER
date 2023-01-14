@@ -1,12 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 namespace DaftAppleGames.MainMenu
 {
-
-
     public class RotateCameraAroundObject : MonoBehaviour
     {
         [Header("Settings")]
@@ -16,6 +11,7 @@ namespace DaftAppleGames.MainMenu
         public float cameraHeight = 1.0f;
 
         private Camera _camera;
+        private bool _running = true;
 
         /// <summary>
         /// Initiatlise the Camera
@@ -33,7 +29,10 @@ namespace DaftAppleGames.MainMenu
         // Update is called once per frame
         void Update()
         {
-            AlignAndRotate();
+            if(_running)
+            {
+                AlignAndRotate();
+            }
         }
 
         /// <summary>
@@ -43,7 +42,8 @@ namespace DaftAppleGames.MainMenu
         /// <param name="charModel"></param>
         private void AlignAndRotate()
         {
-            _camera.transform.Translate(Vector3.right * Time.deltaTime);
+            // _camera.transform.Translate(Vector3.right * Time.deltaTime * rotateSpeed);
+            _camera.transform.RotateAround(targetTransform.position, Vector3.up, rotateSpeed * Time.deltaTime);
             _camera.transform.LookAt(targetTransform);
         }
 
@@ -54,9 +54,25 @@ namespace DaftAppleGames.MainMenu
         /// <param name="charModel"></param>
         private void AlignCamera()
         {
-            _camera.transform.position = targetTransform.position + (Vector3.back * cameraDistance) + (Vector3.up * cameraHeight);
+            _camera.transform.position = targetTransform.position + (Vector3.forward * cameraDistance) + (Vector3.up * cameraHeight);
             _camera.transform.LookAt(targetTransform);
         }
 
+
+        /// <summary>
+        /// Resume the rotation
+        /// </summary>
+        public void Resume()
+        {
+            _running = true;
+        }
+
+        /// <summary>
+        /// Pause the rotation
+        /// </summary>
+        public void Pause()
+        {
+            _running = false;
+        }
     }
 }
