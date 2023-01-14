@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioSource: {fileID: 7561934469894060025, guid: b56bd42abe704af4b878a76d69b63eb9,
     type: 3}
-  audioMixerGroup: {fileID: -8362709159092265448, guid: d4cb3dd8c857cad4599292f12c8e37c2,
+  audioMixerGroup: {fileID: 598771820560197469, guid: d4cb3dd8c857cad4599292f12c8e37c2,
     type: 2}
   TextureOrMaterialNames: []
   audioClips: []

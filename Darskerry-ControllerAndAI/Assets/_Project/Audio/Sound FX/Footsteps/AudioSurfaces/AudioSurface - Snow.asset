@@ -16,7 +16,8 @@ MonoBehaviour:
     type: 3}
   audioMixerGroup: {fileID: 8345224351309449709, guid: d4cb3dd8c857cad4599292f12c8e37c2,
     type: 2}
-  TextureOrMaterialNames: []
+  TextureOrMaterialNames:
+  - T_Snow_Ground_1_BC_SM
   audioClips:
   - {fileID: 8300000, guid: 42fbd0e62bb611149b7d88952b530796, type: 3}
   - {fileID: 8300000, guid: 8bc43821cfe5d444b995a478397b7847, type: 3}
