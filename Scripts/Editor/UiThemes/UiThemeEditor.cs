@@ -9,8 +9,12 @@ namespace DaftAppleGames.Editor.UiThemes
 {
     public class UiThemeEditor : OdinEditorWindow
     {
+        [Header("UI Theme Settings")]
         [SerializeField]
         public UiThemeEditorSettings themeSettings;
+
+        [Header("Target UI Game Object")]
+        public GameObject targetUiGameObject;
 
         public bool reportOnly = false;
 
@@ -37,6 +41,13 @@ namespace DaftAppleGames.Editor.UiThemes
                 Debug.LogError("Please load a theme settings file!");
                 return;
             }
+
+            if(!targetUiGameObject)
+            {
+                Debug.LogError("Please select a root UI based Game Object to process.");
+                return;
+            }
+
             ApplyTheme();
         }
 
@@ -49,7 +60,11 @@ namespace DaftAppleGames.Editor.UiThemes
             int count = 0;
 
             // Find all Themable UI elements
-            Button[] allButtons = Resources.FindObjectsOfTypeAll(typeof(Button)) as Button[];
+            Button[] allButtons = targetUiGameObject.GetComponentsInChildren<Button>(true);
+            Toggle[] allToggles = targetUiGameObject.GetComponentsInChildren<Toggle>(true);
+            TMP_Dropdown[] allDropdowns = targetUiGameObject.GetComponentsInChildren<TMP_Dropdown>(true);
+            Slider[] allSliders = targetUiGameObject.GetComponentsInChildren<Slider>(true);
+
             ColorBlock newButtonColourBlock = new ColorBlock
             {
                 normalColor = themeSettings.buttonNormalColour,
@@ -71,11 +86,53 @@ namespace DaftAppleGames.Editor.UiThemes
                     currentButton.colors = newButtonColourBlock;
                     currentButton.GetComponent<Image>().sprite = themeSettings.buttonSourceImage;
                     TextMeshProUGUI buttonText = buttonGameObject.GetComponentInChildren<TextMeshProUGUI>();
+                    if(!buttonText)
+                    {
+                        Debug.LogError($"Error: Button {currentButton.name} should contain a TextMeshPro control!");
+                        continue;
+                    }
+
                     buttonText.font = themeSettings.buttonFont;
                     buttonText.fontSize = themeSettings.buttonFontSize;
                     buttonText.color = themeSettings.buttonFontColour;
                 }
                 outputArea += $"\nButton {buttonGameObject.name} processed: ";
+            }
+
+            // Iterate over drop downs
+            foreach (TMP_Dropdown currentDropdown in allDropdowns)
+            {
+                GameObject dropdownGameObject = currentDropdown.gameObject;
+
+                if (!reportOnly)
+                {
+                    currentDropdown.colors = newButtonColourBlock;
+                }
+                outputArea += $"\nDropdown {dropdownGameObject.name} processed: ";
+            }
+
+            // Iterate over toggles
+            foreach (Toggle currentToggle in allToggles)
+            {
+                GameObject toggleGameObject = currentToggle.gameObject;
+
+                if (!reportOnly)
+                {
+                    currentToggle.colors = newButtonColourBlock;
+                }
+                outputArea += $"\nToggle {toggleGameObject.name} processed: ";
+            }
+
+            // Iterate over sliders
+            foreach (Slider currentSlider in allSliders)
+            {
+                GameObject sliderGameObject = currentSlider.gameObject;
+
+                if (!reportOnly)
+                {
+                    currentSlider.colors = newButtonColourBlock;
+                }
+                outputArea += $"\nSlider {sliderGameObject.name} processed: ";
             }
 
             count++;
