@@ -16,11 +16,11 @@ MonoBehaviour:
   buttonNormalColour: {r: 1, g: 1, b: 1, a: 1}
   buttonHighlightedColour: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonPressedColour: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-  buttonSelectedColour: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonDisabledColour: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+  buttonSelectedColour: {r: 0.5137255, g: 0.5764706, b: 0.93333334, a: 1}
+  buttonDisabledColour: {r: 1, g: 1, b: 1, a: 1}
   buttonColourMultiplier: 1
   buttonFadeDuration: 0.1
-  buttonFontSize: 28
+  buttonFontSize: 36
   buttonFont: {fileID: 11400000, guid: 12feb39aeb35c40418511735bef20564, type: 2}
   buttonFontColour: {r: 1, g: 1, b: 1, a: 1}
   sliderColour: {r: 0, g: 0, b: 0, a: 0}

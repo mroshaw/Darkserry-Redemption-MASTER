@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9679b01f5c9081b4499e05501d838339, type: 3}
+  m_Name: UiSoundEditorSettings
+  m_EditorClassIdentifier: 
+  uiSoundAudioMixerGroup: {fileID: -8991655405756310492, guid: d4cb3dd8c857cad4599292f12c8e37c2,
+    type: 2}
+  clickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  buttonClickIdentifiers: []
+  cancelClickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  cancelButtonClickIdentifiers: []
+  bigClickSound: {fileID: 8300000, guid: 46040b05752a4a344878fd0acbfb41bf, type: 3}
+  bigButtonClickIdentifiers: []
+  backClickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  backButtonClickIdentifiers: []
+  dropDownClickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  dropDownClickIdentifiers: []
+  sliderClickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  sliderClickIdentifiers: []
+  toggleClickSound: {fileID: 8300000, guid: 67bda5845fa19254cb85efd92c07aac5, type: 3}
+  toggleClickIdentifiers: []
