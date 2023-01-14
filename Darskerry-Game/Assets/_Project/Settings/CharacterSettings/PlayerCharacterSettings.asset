@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79803992d5f4009459b3f23d8843c169, type: 3}
+  m_Name: PlayerCharacterSettings
+  m_EditorClassIdentifier: 
+  characterName: Emily
+  walkSpeed: 2
+  runSpeed: 4
+  sprintSpeed: 6
+  crouchSpeed: 2
+  animSmooth: 0.05
+  rotationSpeed: 16
+  movementSmooth: 8
+  strafeWalkSpeed: 2
+  strafeRunSpeed: 4
+  strafeSprintSpeed: 6
+  strafeCrouchSpeed: 2
+  leanSmooth: 0.05
+  maxHealth: 200
+  maxStamina: 200
+  healthRecovery: 1
+  healthRecoveryDelay: 20
+  staminaRecovery: 1.2
+  jumpStamina: 30
+  rollStamina: 25
+  groundedLayer:
+    serializedVersion: 2
+    m_Bits: 62914561
+  useSnapGround: 0
+  useSlopeLimit: 1
+  slopeLimit: 45
+  swimForwardSpeed: 3
+  swimUpSpeed: 1
+  swimDownSpeed: 1
+  swimRotationSpeed: 1
+  swimUpAndDownSmooth: 2
+  swimStamina: 15
+  swimHealthConsumption: 1
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 512
+  ignoreTags:
+  - Player
+  blockAimLayer:
+    serializedVersion: 2
+    m_Bits: 62914561
+  infiniteAmmo: 1
+  useAmmoDisplay: 0
+  ammoListData: {fileID: 11400000, guid: c425702b0dd59a641ab11bc2fcb33519, type: 2}
+  inventoryItemListData: {fileID: 11400000, guid: 86c48b757034ef54d9a241d8f9c69d6d,
+    type: 2}
+  defaultDamageEffects:
+  - {fileID: 2656253210798625995, guid: a78e9ef18b366424b84e0c7410d2fe72, type: 3}
+  - {fileID: 5865290276592450837, guid: 42a28376f729c864a81abf66add7a418, type: 3}
+  - {fileID: 764304066602274965, guid: 4a322f29a9e1fa54f90223de8bcf3a28, type: 3}
+  - {fileID: 7935733108997359171, guid: e822d59151d3597428b0b63bf25355e7, type: 3}
+  - {fileID: 4288107571095694937, guid: c3f8938673a07704e93ac52eee18f410, type: 3}
+  - {fileID: 1165703760847671896, guid: bb596cd440832554089a7125852e836f, type: 3}
+  - {fileID: 4152240900433254336, guid: 6d3629f845b40e24fb51d381e84bbc77, type: 3}
+  - {fileID: 6463355840203370170, guid: 70ead61ff20b23b4e97b90d8e8997ecd, type: 3}
+  - {fileID: 5170585893340993107, guid: 7b88f11816abaa34c9e02cbaa8485321, type: 3}
+  - {fileID: 2629016494315086251, guid: 5776aed3bb070e54cb09a11c8a6a5831, type: 3}
+  - {fileID: 3034872428933141512, guid: 52d94bfe44b09ff4b9e9788e9a86a778, type: 3}
+  - {fileID: 2360933683143488451, guid: 730678b8a5330c449ada55bde83402ce, type: 3}
+  - {fileID: 5016170632959171363, guid: c3ed06559a66b724b91c3124e75ddec9, type: 3}
+  - {fileID: 8859926575668995837, guid: 097a30048e9007141899f834041a5ac7, type: 3}
+  - {fileID: 5936082179827903908, guid: cb58ece77d11ef945aecd072f2e46a8d, type: 3}
+  - {fileID: 5494213943435191861, guid: db51fe09adf27d640b4e10018c2d76ba, type: 3}
+  - {fileID: 5371219466416337994, guid: f9e099178c81bee439a79eecec91dacb, type: 3}
+  headTrackObstacleLayer:
+    serializedVersion: 2
+    m_Bits: 62914561
+  headTrackDistanceToDetect: 10
+  defaultAudioSurface: {fileID: 11400000, guid: 7e511ca4a93b47b478f5220a12788847,
+    type: 2}
+  customAudioSurfaces:
+  - {fileID: 11400000, guid: 28101c9650b2d5e429f27091672ebeb0, type: 2}
+  - {fileID: 11400000, guid: e53adeb973b2a30439a2553a13c4d4c4, type: 2}
+  - {fileID: 11400000, guid: d393d6c98c8265b43bd677b7a9198ea5, type: 2}
+  - {fileID: 11400000, guid: 0870caeb9a62bb54d9eb4c5305003078, type: 2}
+  - {fileID: 11400000, guid: 015601c4ffd2d074fad4b8b56da1baae, type: 2}
+  - {fileID: 11400000, guid: 46007424ac9fcca4b9c712cbcde69cd2, type: 2}
+  - {fileID: 11400000, guid: 58834114cc5a40046bc4325394a4ef12, type: 2}
+  - {fileID: 11400000, guid: 343ed616152d3cb41bfe076b7e390ba8, type: 2}
+  - {fileID: 11400000, guid: 635be0ecafce3e14880344da1feaf828, type: 2}
+  useFootsteps: 1
+  audioMixerGroup: {fileID: -8991655405756310492, guid: d4cb3dd8c857cad4599292f12c8e37c2,
+    type: 2}
