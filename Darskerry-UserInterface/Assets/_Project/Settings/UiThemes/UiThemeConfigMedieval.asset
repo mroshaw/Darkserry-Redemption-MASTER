@@ -16,8 +16,8 @@ MonoBehaviour:
   buttonNormalColour: {r: 1, g: 1, b: 1, a: 1}
   buttonHighlightedColour: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
   buttonPressedColour: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-  buttonSelectedColour: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-  buttonDisabledColour: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+  buttonSelectedColour: {r: 0.5137255, g: 0.5764706, b: 0.93333334, a: 1}
+  buttonDisabledColour: {r: 1, g: 1, b: 1, a: 1}
   buttonColourMultiplier: 1
   buttonFadeDuration: 0.1
   buttonFontSize: 36
