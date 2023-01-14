@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_Project/Scenes/WorkingScenes/OutdoorsScene.unity
     guid: 8124e5870f4fd4c779e7a5f994e84ad1
+  - enabled: 1
+    path: Assets/_Project/Scenes/MainGameScene.unity
+    guid: c5f6e4396e9e82442b79b5f5c191a375
+  - enabled: 1
+    path: Assets/_Project/Scenes/LoadingScene.unity
+    guid: b5ff09427ea489b47b11c209178bc033
   m_configObjects: {}
