@@ -1,5 +1,6 @@
 using DaftAppleGames.Ui;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 namespace DaftAppleGames.Settings
@@ -8,9 +9,13 @@ namespace DaftAppleGames.Settings
     {
         [Header("UI Config - Header")]
         public Button audioHeaderButton;
+        public GameObject audioFirstSelected;
         public Button displayHeaderButton;
+        public GameObject displayFirstSelected;
         public Button gameplayHeaderButton;
+        public GameObject gameplayFirstSelected;
         public Button performanceHeaderButton;
+        public GameObject performanceFirstSelected;
 
         [Header("UI Config - Buttons")]
         public Button saveSettingsButton;
@@ -27,11 +32,6 @@ namespace DaftAppleGames.Settings
         private GameplaySettingsUiController _gameplaySettingsUiController;
         private PerformanceSettingsUiController _performanceSettingsUiController;
 
-        private bool hasAudioSettings = false;
-        private bool hasDisplaySettings = false;
-        private bool hasGameplaySettings = false;
-        private bool hasPerformanceSettings = false;
-
         /// <summary>
         /// Configure the UI
         /// </summary>
@@ -40,28 +40,9 @@ namespace DaftAppleGames.Settings
             _gameSettingsManager = GetComponent<GameSettingsManager>();
 
             _audioSettingsUiController = GetComponentInChildren<AudioSettingsUiController>(true);
-            if(_audioSettingsUiController)
-            {
-                hasAudioSettings = true;
-            }
-
             _displaySettingsUiController = GetComponentInChildren<DisplaySettingsUiController>(true);
-            if (_displaySettingsUiController)
-            {
-                hasDisplaySettings = true;
-            }
-
             _gameplaySettingsUiController = GetComponentInChildren<GameplaySettingsUiController>(true);
-            if (_gameplaySettingsUiController)
-            {
-                hasGameplaySettings = true;
-            }
-
             _performanceSettingsUiController = GetComponentInChildren<PerformanceSettingsUiController>(true);
-            if (_performanceSettingsUiController)
-            {
-                hasPerformanceSettings = true;
-            }
 
             InitControls();
             base.Start();
@@ -73,10 +54,11 @@ namespace DaftAppleGames.Settings
         /// <param name="invokingUiController"></param>
         public void ShowUi(UiController invokingUiController)
         {
+            base.ShowUi();
             _isOpenedByOtherUi = true;
             _invokingUiController = invokingUiController;
             invokingUiController.HideUi();
-            base.ShowUi();
+            ShowAudioSettings();
         }
 
         /// <summary>
@@ -84,8 +66,9 @@ namespace DaftAppleGames.Settings
         /// </summary>
         public override void ShowUi()
         {
-            _isOpenedByOtherUi = false;
             base.ShowUi();
+            _isOpenedByOtherUi = false;
+            ShowAudioSettings();
         }
 
         /// <summary>
@@ -124,6 +107,9 @@ namespace DaftAppleGames.Settings
 
             // Open the Audio Settings
             _audioSettingsUiController.ShowUi();
+
+            // Set the Event System
+            EventSystem.current.SetSelectedGameObject(audioFirstSelected);
         }
 
         /// <summary>
@@ -138,6 +124,9 @@ namespace DaftAppleGames.Settings
 
             // Show Display settings
             _displaySettingsUiController.ShowUi();
+
+            // Set the Event System
+            EventSystem.current.SetSelectedGameObject(displayFirstSelected);
         }
 
         /// <summary>
@@ -152,6 +141,9 @@ namespace DaftAppleGames.Settings
 
             // Show Gameplay settings
             _gameplaySettingsUiController.ShowUi();
+
+            // Set the Event System
+            EventSystem.current.SetSelectedGameObject(gameplayFirstSelected);
         }
 
         /// <summary>
@@ -167,6 +159,9 @@ namespace DaftAppleGames.Settings
 
             // Show Performance settings
             _performanceSettingsUiController.ShowUi();
+
+            // Set the Event System
+            EventSystem.current.SetSelectedGameObject(performanceFirstSelected);
         }
 
         /// <summary>
@@ -183,6 +178,8 @@ namespace DaftAppleGames.Settings
         /// </summary>
         public void CancelSettings()
         {
+            // Load the previous settings
+            _gameSettingsManager.LoadSettings();
             CloseUi();
         }
 

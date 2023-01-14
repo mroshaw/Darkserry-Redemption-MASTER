@@ -1,6 +1,4 @@
 using DaftAppleGames.Ui;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -15,17 +13,25 @@ namespace DaftAppleGames.Settings
         public Slider ambientFxVolumeSlider;
 
         [Header("Settings Model")]
-        private AudioSettingsManager _audioSettingsManager;
+        public AudioSettingsManager audioSettingsManager;
 
         /// <summary>
         /// Initialise the Settings Component
         /// </summary>
         public override void Start()
         {
-            _audioSettingsManager = GetComponent<AudioSettingsManager>();
             InitControls();
-            ConfigureSettingsControls();
+            RefreshControlState();
             base.Start();
+        }
+
+        /// <summary>
+        /// Override ShowUi to refresh controls
+        /// </summary>
+        public override void ShowUi()
+        {
+            RefreshControlState();
+            base.ShowUi();
         }
 
         /// <summary>
@@ -49,9 +55,12 @@ namespace DaftAppleGames.Settings
         /// <summary>
         /// Initiatlise the controls with current settings
         /// </summary>
-        public void ConfigureSettingsControls()
+        public void RefreshControlState()
         {
-            masterVolumeSlider.SetValueWithoutNotify(_audioSettingsManager.GetMasterVolume());
+            masterVolumeSlider.SetValueWithoutNotify(audioSettingsManager.GetMasterVolume());
+            musicVolumeSlider.SetValueWithoutNotify(audioSettingsManager.GetMusicVolume());
+            soundFxVolumeSlider.SetValueWithoutNotify(audioSettingsManager.GetSoundFxVolume());
+            ambientFxVolumeSlider.SetValueWithoutNotify(audioSettingsManager.GetAmbientFxVolume());
         }
 
         /// <summary>
@@ -60,22 +69,22 @@ namespace DaftAppleGames.Settings
         /// <param name="masterVolumeValue"></param>
         public void UpdateMasterVolume(float masterVolumeValue)
         {
-            _audioSettingsManager.SetMasterVolume(masterVolumeValue);
+            audioSettingsManager.SetMasterVolume(masterVolumeValue);
         }
 
         public void UpdateMusicVolume(float musicVolumeValue)
         {
-            _audioSettingsManager.SetMusicVolume(musicVolumeValue);
+            audioSettingsManager.SetMusicVolume(musicVolumeValue);
         }
 
         public void UpdateSoundFxVolume(float soundFxVolumeValue)
         {
-            _audioSettingsManager.SetSoundFxVolume(soundFxVolumeValue);
+            audioSettingsManager.SetSoundFxVolume(soundFxVolumeValue);
         }
 
         public void UpdateAmbientVolume(float ambientVolumeValue)
         {
-            _audioSettingsManager.SetAmbientVolume(ambientVolumeValue);
+            audioSettingsManager.SetAmbientVolume(ambientVolumeValue);
         }
     }
 }

@@ -12,17 +12,25 @@ namespace DaftAppleGames.Settings
         public Toggle bloodAndGoreToggle;
 
         [Header("Settings Model")]
-        private GameplaySettingsManager _gameplaySettingsManager;
+        public GameplaySettingsManager gameplaySettingsManager;
 
         /// <summary>
         /// Initialise the Settings Component
         /// </summary>
         public override void Start()
         {
-            _gameplaySettingsManager = GetComponent<GameplaySettingsManager>();
             InitControls();
-            ConfigureSettingsControls();
+            RefreshControlState();
             base.Start();
+        }
+
+        /// <summary>
+        /// Override ShowUi to refresh controls
+        /// </summary>
+        public override void ShowUi()
+        {
+            RefreshControlState();
+            base.ShowUi();
         }
 
         /// <summary>
@@ -40,9 +48,9 @@ namespace DaftAppleGames.Settings
         /// <summary>
         /// Initiatlise the controls with current settings
         /// </summary>
-        public void ConfigureSettingsControls()
+        public void RefreshControlState()
         {
-            bloodAndGoreToggle.SetIsOnWithoutNotify(_gameplaySettingsManager.GetBlooodAndGore());
+            bloodAndGoreToggle.SetIsOnWithoutNotify(gameplaySettingsManager.GetBlooodAndGore());
         }
 
         /// <summary>

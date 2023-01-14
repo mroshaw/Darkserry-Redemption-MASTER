@@ -1,6 +1,7 @@
 using DaftAppleGames.Ui;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,20 +10,30 @@ namespace DaftAppleGames.Settings
     public class PerformanceSettingsUiController : UiController
     {
         [Header("UI Configuration")]
-        public Toggle perfModeToggle;
+        public TMP_Dropdown textureResDropdown;
+        public TMP_Dropdown antiAliasingDropdown;
+        public TMP_Dropdown qualityPresetDropdown;
 
         [Header("Settings Model")]
-        private PerformanceSettingsManager _performanceSettingsManager;
+        public PerformanceSettingsManager performanceSettingsManager;
 
         /// <summary>
         /// Initialise the Settings Component
         /// </summary>
         public override void Start()
         {
-            _performanceSettingsManager = GetComponent<PerformanceSettingsManager>();
             InitControls();
-            ConfigureSettingsControls();
+            RefreshControlState();
             base.Start();
+        }
+
+        /// <summary>
+        /// Override ShowUi to refresh controls
+        /// </summary>
+        public override void ShowUi()
+        {
+            RefreshControlState();
+            base.ShowUi();
         }
 
         /// <summary>
@@ -31,27 +42,51 @@ namespace DaftAppleGames.Settings
         private void InitControls()
         {
             // Remove all listeners, to prevent doubling up.
-            perfModeToggle.onValueChanged.RemoveAllListeners();
+            textureResDropdown.onValueChanged.RemoveAllListeners();
+            antiAliasingDropdown.onValueChanged.RemoveAllListeners();
+            qualityPresetDropdown.onValueChanged.RemoveAllListeners();
 
             // Configure the Audio setting sliders
-            perfModeToggle.onValueChanged.AddListener(UpdatePerfMode);
+            textureResDropdown.onValueChanged.AddListener(UpdateTextureResolution);
+            antiAliasingDropdown.onValueChanged.AddListener(UpdateAntiAliasing);
+            qualityPresetDropdown.onValueChanged.AddListener(UpdateQualityPreset);
         }
 
         /// <summary>
         /// Initiatlise the controls with current settings
         /// </summary>
-        public void ConfigureSettingsControls()
+        public void RefreshControlState()
         {
-            perfModeToggle.SetIsOnWithoutNotify(_performanceSettingsManager.GetPerfMode());
+            textureResDropdown.SetValueWithoutNotify(performanceSettingsManager.GetTextureResolutionIndex());
+            antiAliasingDropdown.SetValueWithoutNotify(performanceSettingsManager.GetAntiAliasingIndex());
+            qualityPresetDropdown.SetValueWithoutNotify(performanceSettingsManager.GetQualityPresetIndex());
         }
 
         /// <summary>
         /// UI controller method to manage "Master Volume" UI changes
         /// </summary>
         /// <param name="masterVolumeValue"></param>
-        public void UpdatePerfMode(bool fullScreenValue)
+        public void UpdateTextureResolution(int textureResIndex)
         {
-            
+            performanceSettingsManager.SetTextureResolution(textureResIndex);
+        }
+
+        /// <summary>
+        /// Handle Anti Aliasing value change
+        /// </summary>
+        /// <param name="antiAliasingIndex"></param>
+        public void UpdateAntiAliasing(int antiAliasingIndex)
+        {
+            performanceSettingsManager.SetAntiAliasing(antiAliasingIndex);
+        }
+
+        /// <summary>
+        /// Handle Quality Preset value changed
+        /// </summary>
+        /// <param name="qualityPresetIndex"></param>
+        public void UpdateQualityPreset(int qualityPresetIndex)
+        {
+            performanceSettingsManager.SetQualityPreset(qualityPresetIndex);
         }
     }
 }

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace DaftAppleGames.Settings
@@ -11,85 +9,37 @@ namespace DaftAppleGames.Settings
         private GameplaySettingsManager _gameplaySettingsManager;
         private PerformanceSettingsManager _performanceSettingsManager;
 
-        public bool hasAudioSettings = false;
-        public bool hasDisplaySettings = false;
-        public bool hasGameplaySettings = false;
-        public bool hasPerformanceSettings = false;
-
         /// <summary>
         /// Initialise setting controllers
         /// </summary>
         private void Start()
         {
-            _audioSettingsManager = GetComponent<AudioSettingsManager>();
-            if(_audioSettingsManager)
-            {
-                hasAudioSettings = true;
-            }
-
-            _displaySettingsManager = GetComponent<DisplaySettingsManager>();
-            if (_displaySettingsManager)
-            {
-                hasDisplaySettings = true;
-            }
-
-            _gameplaySettingsManager = GetComponent<GameplaySettingsManager>();
-            if (_gameplaySettingsManager)
-            {
-                hasGameplaySettings = true;
-            }
-
-            _performanceSettingsManager = GetComponent<PerformanceSettingsManager>();
-            if (_performanceSettingsManager)
-            {
-                hasPerformanceSettings = true;
-            }
+            _audioSettingsManager = GetComponentInChildren<AudioSettingsManager>(true);
+            _displaySettingsManager = GetComponentInChildren<DisplaySettingsManager>(true);
+            _gameplaySettingsManager = GetComponentInChildren<GameplaySettingsManager>(true);
+            _performanceSettingsManager = GetComponentInChildren<PerformanceSettingsManager>(true);
         }
 
+        /// <summary>
+        /// Save all settings
+        /// </summary>
         public void SaveSettings()
         {
-            if(hasAudioSettings)
-            {
-                _audioSettingsManager.SaveSettings();
-            }
-
-            if(hasDisplaySettings)
-            {
-                _displaySettingsManager.SaveSettings();
-            }
-
-            if(hasGameplaySettings)
-            {
-                _gameplaySettingsManager.SaveSettings();
-            }
-
-            if(hasPerformanceSettings)
-            {
-                _performanceSettingsManager.SaveSettings();
-            }
+            _audioSettingsManager.SaveSettings();
+            _displaySettingsManager.SaveSettings();
+            _gameplaySettingsManager.SaveSettings();
+            _performanceSettingsManager.SaveSettings();
         }
 
+        /// <summary>
+        /// Load all settings
+        /// </summary>
         public void LoadSettings()
         {
-            if (hasAudioSettings)
-            {
-                _audioSettingsManager.LoadSettings();
-            }
-
-            if (hasDisplaySettings)
-            {
-                _displaySettingsManager.LoadSettings();
-            }
-
-            if (hasGameplaySettings)
-            {
-                _gameplaySettingsManager.LoadSettings();
-            }
-
-            if (hasPerformanceSettings)
-            {
-                _performanceSettingsManager.LoadSettings();
-            }
+            _audioSettingsManager.LoadSettings();
+            _displaySettingsManager.LoadSettings();
+            _gameplaySettingsManager.LoadSettings();
+            _performanceSettingsManager.LoadSettings();
         }
     }
 }

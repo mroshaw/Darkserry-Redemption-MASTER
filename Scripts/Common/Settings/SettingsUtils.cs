@@ -30,6 +30,12 @@ namespace DaftAppleGames.Settings
             return settingValue;
         }
 
+        /// <summary>
+        /// Load a "bool" type Player setting
+        /// </summary>
+        /// <param name="settingKey"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
         public static bool LoadBoolSetting(string settingKey, bool defaultValue)
         {
             bool settingValue;
@@ -46,5 +52,26 @@ namespace DaftAppleGames.Settings
             return settingValue;
         }
 
+        /// <summary>
+        /// Load an "integer" type Player setting
+        /// </summary>
+        /// <param name="settingKey"></param>
+        /// <param name="defaultValue"></param>
+        /// <returns></returns>
+        public static int LoadIntSetting(string settingKey, int defaultValue)
+        {
+            int settingValue;
+
+            // Check if key already exists and return it, otherwise return the default
+            if (PlayerPrefs.HasKey(settingKey))
+            {
+                settingValue = PlayerPrefs.GetInt(settingKey);
+            }
+            else
+            {
+                settingValue = defaultValue;
+            }
+            return settingValue;
+        }
     }
 }
