@@ -7,6 +7,14 @@ TagManager:
   - PW - Nature
   - PW - Prop
   - PW - Building
+  - Ignore Ragdoll
+  - Weapon
+  - Action
+  - Water
+  - AutoCrouch
+  - LadderTrigger
+  - lb_perchTarget
+  - lb_groundTarget
   layers:
   - Default
   - TransparentFX
