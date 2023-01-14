@@ -151,7 +151,7 @@ MonoBehaviour:
       m_detailTexture: {fileID: 0}
       m_detailTextureFileName: 
       m_minWidth: 1
-      m_maxWidth: 2
+      m_maxWidth: 1
       m_minHeight: 1
       m_maxHeight: 2
       m_noiseSpread: 0.1
@@ -176,9 +176,9 @@ MonoBehaviour:
       m_detailTexture: {fileID: 0}
       m_detailTextureFileName: 
       m_minWidth: 1
-      m_maxWidth: 2
+      m_maxWidth: 1
       m_minHeight: 1
-      m_maxHeight: 2
+      m_maxHeight: 1
       m_noiseSpread: 0.1
       m_healthyColour: {r: 0.2627451, g: 0.9764706, b: 0.16470589, a: 1}
       m_dryColour: {r: 0.8039216, g: 0.7372549, b: 0.101960786, a: 1}
@@ -201,7 +201,7 @@ MonoBehaviour:
       m_detailTexture: {fileID: 0}
       m_detailTextureFileName: 
       m_minWidth: 1
-      m_maxWidth: 2
+      m_maxWidth: 1
       m_minHeight: 1
       m_maxHeight: 2
       m_noiseSpread: 0.1
@@ -226,9 +226,9 @@ MonoBehaviour:
       m_detailTexture: {fileID: 0}
       m_detailTextureFileName: 
       m_minWidth: 1
-      m_maxWidth: 2
+      m_maxWidth: 1
       m_minHeight: 1
-      m_maxHeight: 2
+      m_maxHeight: 1
       m_noiseSpread: 0.1
       m_healthyColour: {r: 0.2627451, g: 0.9764706, b: 0.16470589, a: 1}
       m_dryColour: {r: 0.8039216, g: 0.7372549, b: 0.101960786, a: 1}
@@ -501,7 +501,7 @@ MonoBehaviour:
     m_currInstanceCnt: 0
     m_activeInstanceCnt: 0
     m_inactiveInstanceCnt: 0
-    m_resourceSettingsFoldedOut: 0
+    m_resourceSettingsFoldedOut: 1
     m_isHelpActive: 0
     m_spawnedInstances: 17821
     m_goSpawnTargetMode: 0
@@ -1017,7 +1017,7 @@ MonoBehaviour:
     m_currInstanceCnt: 0
     m_activeInstanceCnt: 0
     m_inactiveInstanceCnt: 0
-    m_resourceSettingsFoldedOut: 0
+    m_resourceSettingsFoldedOut: 1
     m_isHelpActive: 0
     m_spawnedInstances: 1423
     m_goSpawnTargetMode: 0
@@ -1275,7 +1275,7 @@ MonoBehaviour:
     m_currInstanceCnt: 0
     m_activeInstanceCnt: 0
     m_inactiveInstanceCnt: 0
-    m_resourceSettingsFoldedOut: 0
+    m_resourceSettingsFoldedOut: 1
     m_isHelpActive: 0
     m_spawnedInstances: 1630
     m_goSpawnTargetMode: 0
@@ -4558,37 +4558,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 65764098}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &65818327
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 65818328}
-  m_Layer: 0
-  m_Name: Terrain Loader Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &65818328
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 65818327}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 556002053}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &71534614
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22356,6 +22325,30 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 543192042}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &546093864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformSettings:
+    translation: {x: 490.93384, y: 1059.3658, z: -53.97357}
+    scale: {x: 8.258233, y: 1, z: 8.258233}
+    rotation: {x: 0, y: 0, z: 0}
+    flipScaleX: 0
+    flipScaleY: 0
+    flipScaleZ: 0
+  domainSettings:
+    noiseTypeName: Perlin
+    fractalTypeName: Fbm
+    noiseTypeParams: 
+    fractalTypeParams: '{"warpOffsets":{"x":-288.7535705566406,"y":-419.8313903808594,"z":697.4801025390625,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5130776166915894,"frequency":1.0,"persistence":0.5,"lacunarity":0.8844825625419617,"warpIterations":1.4941275119781495,"warpStrength":0.7190927863121033,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1 &549562149
 GameObject:
   m_ObjectHideFlags: 0
@@ -22898,38 +22891,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 551840894}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &556002052
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 556002053}
-  m_Layer: 0
-  m_Name: Gaia Runtime
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &556002053
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 556002052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 65818328}
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &558535844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32423,7 +32384,7 @@ MonoBehaviour:
       y: 0
       z: 0
   m_loadMode: 0
-  m_isSelected: 1
+  m_isSelected: 0
   m_beingDragged: 0
   m_minRefreshDistance: 100
   m_maxRefreshDistance: 2000
@@ -38018,7 +37979,7 @@ MonoBehaviour:
       y: 0
       z: 0
   m_loadMode: 1
-  m_isSelected: 0
+  m_isSelected: 1
   m_beingDragged: 0
   m_minRefreshDistance: 100
   m_maxRefreshDistance: 2000
@@ -38461,18 +38422,18 @@ MonoBehaviour:
     m_detailerSettingsObjectAssetGUID: 
     m_detailerSettingsObjectInstanceID: 0
   m_terrainDetailPrototypeBeingDrawn:
-    m_name: New Terrain Detail 18
+    m_name: New Terrain Detail 20
     m_renderMode: 1
     m_useInstancing: 0
-    m_detailProtoype: {fileID: 1082782532653174, guid: 9240c748083f31643a04515a28e1b60d,
+    m_detailProtoype: {fileID: 1762177999608252, guid: c9a1c7dae7472f646a62207bc7a835cf,
       type: 3}
     m_detailPrototypeFileName: 
     m_detailTexture: {fileID: 0}
     m_detailTextureFileName: 
     m_minWidth: 1
-    m_maxWidth: 2
+    m_maxWidth: 1
     m_minHeight: 1
-    m_maxHeight: 2
+    m_maxHeight: 1
     m_noiseSpread: 0.1
     m_healthyColour: {r: 0.2627451, g: 0.9764706, b: 0.16470589, a: 1}
     m_dryColour: {r: 0.8039216, g: 0.7372549, b: 0.101960786, a: 1}
@@ -98052,30 +98013,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1933487658}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1942146926
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cba17d399ab86974c8ef9551f6e8f8d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  transformSettings:
-    translation: {x: 490.93384, y: 1059.3658, z: -53.97357}
-    scale: {x: 8.258233, y: 1, z: 8.258233}
-    rotation: {x: 0, y: 0, z: 0}
-    flipScaleX: 0
-    flipScaleY: 0
-    flipScaleZ: 0
-  domainSettings:
-    noiseTypeName: Perlin
-    fractalTypeName: Fbm
-    noiseTypeParams: 
-    fractalTypeParams: '{"warpOffsets":{"x":-288.7535705566406,"y":-419.8313903808594,"z":697.4801025390625,"w":0.0},"octavesMinMax":{"x":0.0,"y":16.0},"amplitudeMinMax":{"x":0.0,"y":1.0},"frequencyMinMax":{"x":0.0,"y":2.0},"lacunarityMinMax":{"x":0.0,"y":4.0},"persistenceMinMax":{"x":0.0,"y":1.0},"warpIterationsMinMax":{"x":0.0,"y":8.0},"warpStrengthMinMax":{"x":-2.0,"y":2.0},"octaves":8.0,"amplitude":0.5130776166915894,"frequency":1.0,"persistence":0.5,"lacunarity":0.8844825625419617,"warpIterations":1.4941275119781495,"warpStrength":0.7190927863121033,"warpEnabled":true,"warpExpanded":true}'
 --- !u!1001 &1943472793
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -99808,7 +99745,7 @@ MonoBehaviour:
       m_warpIterations: 1.4941275
       m_warpStrength: 0.7190928
       m_warpOffset: {x: -288.75357, y: -419.8314, z: 697.4801, w: 0}
-    m_noiseSettings: {fileID: 1942146926}
+    m_noiseSettings: {fileID: 546093864}
     m_noiseToolSettings:
       worldHeightRemap: {x: 0, y: 0}
       coordSpace: 0
@@ -102840,7 +102777,7 @@ MonoBehaviour:
   m_allWorldSpaceParticleSystems: []
   m_loadingScreen: {fileID: 0}
   m_autoTerrainStitching: 1
-  m_assembliesAreReloading: 1
+  m_assembliesAreReloading: 0
   m_originTargetTileX: 0
   m_originTargetTileZ: 0
   m_showOriginLoadingBounds: 0
