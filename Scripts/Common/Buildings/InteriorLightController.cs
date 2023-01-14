@@ -17,7 +17,7 @@ namespace DaftAppleGames.Core.Buildings
 
         [Header("Interior Lights")]
         public List<InteriorLight> interiorLights = new();
-#if HDRPTIMEOFDAY
+#if HDRPTIMEOFDAY_
         private HDRPTimeOfDayHelper _hdrpTodHelper;
 #endif
         /// <summary>
@@ -30,7 +30,7 @@ namespace DaftAppleGames.Core.Buildings
             EnviroManager.instance.Events.Settings.onHourPassedActions.AddListener(HourPassedLightUpdate);
 #endif
 
-#if HDRPTIMEOFDAY
+#if HDRPTIMEOFDAY_
             _hdrpTodHelper = FindObjectOfType<HDRPTimeOfDayHelper>();
             if(_hdrpTodHelper)
             {
@@ -65,7 +65,7 @@ namespace DaftAppleGames.Core.Buildings
             }
 #endif
 
-#if HDRPTIMEOFDAY
+#if HDRPTIMEOFDAY_
             if (onHours.Contains(_hdrpTodHelper.currentHour))
             {
                 TurnOnAllLights();

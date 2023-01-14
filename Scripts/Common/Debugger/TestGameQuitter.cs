@@ -9,13 +9,14 @@ namespace DaftAppleGames
     {
         [Header("Configuration")]
         public KeyCode quitKey = KeyCode.Escape;
+        public KeyCode quitKeyModifier = KeyCode.LeftControl;
 
         /// <summary>
         /// Check for keypress then quit
         /// </summary>
         void Update()
         {
-            if(Input.GetKeyDown(quitKey))
+            if(Input.GetKeyDown(quitKey) && Input.GetKeyDown(quitKeyModifier))
             {
                 Application.Quit();
             }

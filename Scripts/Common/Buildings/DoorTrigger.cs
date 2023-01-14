@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 namespace DaftAppleGames.Core.Buildings
 {
@@ -9,6 +7,9 @@ namespace DaftAppleGames.Core.Buildings
     {
         [Header("Door Configuration ")]
         public DoorTriggerLocation doorTriggerLocation;
+        public LayerMask triggerLayerMask;
+        public string triggerTag = "Player";
+
         private Door door;
 
         /// <summary>
@@ -17,6 +18,8 @@ namespace DaftAppleGames.Core.Buildings
         private void Start()
         {
             door = GetComponentInParent<Door>();
+            triggerLayerMask = LayerMask.GetMask("Player");
+            triggerTag = "Player";
         }
 
         /// <summary>
@@ -25,9 +28,13 @@ namespace DaftAppleGames.Core.Buildings
         /// <param name="other"></param>
         public void OnTriggerEnter(Collider other)
         {
-            if(other.CompareTag("Player") && door.autoOpen)
+            if(other.CompareTag(triggerTag) && door.autoOpen)
             {
+                bool inLayer = ((triggerLayerMask & 1 << other.gameObject.layer) == 1 << other.gameObject.layer);
+                if(inLayer)
+                {
                     door.Open(doorTriggerLocation);
+                }
             }
         }
     }

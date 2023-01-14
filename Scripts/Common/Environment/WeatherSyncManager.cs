@@ -27,8 +27,6 @@ namespace DaftAppleGames.Environment
         public float maxWet = 1.0f;
         public float wetTransitionDuration = 5.0f;
 
-        private bool isSnowing = false;
-
         [Header("Overrides")]
         [Range(0.0f, 1.0f)]
         public float snowLevelOverride = 0.0f;
@@ -37,9 +35,6 @@ namespace DaftAppleGames.Environment
 
         [Header("Vegetation")]
         public Material[] vegetationMaterials;
-
-        private float _minWetness = 0.0f;
-        private float _maxWetness = 1.0f;
 
 #if HDRPTIMEOFDAY
         private HDRPTimeOfDayHelper _hdrpTodHelper;
@@ -147,7 +142,7 @@ namespace DaftAppleGames.Environment
         /// <param name="wetLevel"></param>
         private void SetWet(float wetLevel)
         {
-            Shader.SetGlobalVector("_Global_WetnessParams", new Vector2(_minWetness, wetLevel));
+            Shader.SetGlobalVector("_Global_WetnessParams", new Vector2(minWet, wetLevel));
         }
 
         /// <summary>
