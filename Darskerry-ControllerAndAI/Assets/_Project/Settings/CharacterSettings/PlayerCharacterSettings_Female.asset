@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 79803992d5f4009459b3f23d8843c169, type: 3}
-  m_Name: PlayerCharacterSettings
+  m_Name: PlayerCharacterSettings_Female
   m_EditorClassIdentifier: 
   characterName: Emily
   walkSpeed: 2
@@ -18,8 +18,9 @@ MonoBehaviour:
   sprintSpeed: 6
   crouchSpeed: 2
   animSmooth: 0.05
-  rotationSpeed: 16
+  rotationSpeed: 8
   movementSmooth: 8
+  useLeanAnim: 0
   strafeWalkSpeed: 2
   strafeRunSpeed: 4
   strafeSprintSpeed: 6
@@ -34,10 +35,19 @@ MonoBehaviour:
   rollStamina: 25
   groundedLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 62914561
   useSnapGround: 0
+  stopMoveLayer:
+    serializedVersion: 2
+    m_Bits: 50331648
   useSlopeLimit: 1
-  slopeLimit: 45
+  slopeLimit: 60
+  stepOffsetLayer:
+    serializedVersion: 2
+    m_Bits: 33554433
+  stepOffsetMaxHeight: 0.5
+  stepOffsetMinHeight: 0
+  stepOffsetDistance: 0.1
   swimForwardSpeed: 3
   swimUpSpeed: 1
   swimDownSpeed: 1
@@ -47,12 +57,13 @@ MonoBehaviour:
   swimHealthConsumption: 1
   damageLayer:
     serializedVersion: 2
-    m_Bits: 256
-  ignoreTags: []
+    m_Bits: 512
+  ignoreTags:
+  - Player
   blockAimLayer:
     serializedVersion: 2
-    m_Bits: 1
-  infiniteAmmo: 0
+    m_Bits: 62914561
+  infiniteAmmo: 1
   useAmmoDisplay: 0
   ammoListData: {fileID: 11400000, guid: c425702b0dd59a641ab11bc2fcb33519, type: 2}
   inventoryItemListData: {fileID: 11400000, guid: 86c48b757034ef54d9a241d8f9c69d6d,
@@ -77,7 +88,7 @@ MonoBehaviour:
   - {fileID: 5371219466416337994, guid: f9e099178c81bee439a79eecec91dacb, type: 3}
   headTrackObstacleLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 62914561
   headTrackDistanceToDetect: 10
   defaultAudioSurface: {fileID: 11400000, guid: 7e511ca4a93b47b478f5220a12788847,
     type: 2}
@@ -94,3 +105,10 @@ MonoBehaviour:
   useFootsteps: 1
   audioMixerGroup: {fileID: -8991655405756310492, guid: d4cb3dd8c857cad4599292f12c8e37c2,
     type: 2}
+  forceActivateCrouchState: Free Crouch
+  crouchCorrectionTollerance: 0.3
+  invalidAnimationState1: JumpOver
+  invalidAnimationState2: StepUp
+  ikMaxCorrection: 0.7
+  increaseMaxCorrectionDistance: 0.25
+  checkGroundRadius: 0.35
