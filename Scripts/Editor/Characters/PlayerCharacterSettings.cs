@@ -1,7 +1,6 @@
 #if INVECTOR_SHOOTER
 using Invector;
 using Invector.vItemManager;
-using NUnit.Framework;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -23,6 +22,7 @@ namespace DaftAppleGames.Editor.Characters
         public float animSmooth;
         public float rotationSpeed;
         public float movementSmooth;
+        public bool useLeanAnim = false;
 
         [Header("Strafe Movement")]
         public float strafeWalkSpeed;
@@ -44,8 +44,13 @@ namespace DaftAppleGames.Editor.Characters
         [Header("Ground Detection")]
         public LayerMask groundedLayer;
         public bool useSnapGround;
+        public LayerMask stopMoveLayer;
         public bool useSlopeLimit;
         public float slopeLimit = 45.0f;
+        public LayerMask stepOffsetLayer;
+        public float stepOffsetMaxHeight = 0.5f;
+        public float stepOffsetMinHeight = 0.0f;
+        public float stepOffsetDistance = 0.1f;
 
         [Header("Swimming")]
         public float swimForwardSpeed;
@@ -75,6 +80,15 @@ namespace DaftAppleGames.Editor.Characters
 
         [Header("Audio")]
         public AudioMixerGroup audioMixerGroup;
+
+        [Header("iStep Settings")]
+        public string forceActivateCrouchState = "Free Crouch";
+        public float crouchCorrectionTollerance = 0.3f;
+        public string invalidAnimationState1 = "JumpOver";
+        public string invalidAnimationState2 = "StepUp";
+        public float ikMaxCorrection = 0.7f;
+        public float increaseMaxCorrectionDistance = 0.25f;
+        public float checkGroundRadius = 0.35f;
 
     }
 }
