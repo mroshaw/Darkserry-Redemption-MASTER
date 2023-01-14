@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8672156221801946793}
   - component: {fileID: 8672156221801946795}
   - component: {fileID: 8672156221801946794}
+  - component: {fileID: 5645484026491899258}
+  - component: {fileID: 8613689296241846958}
   m_Layer: 0
   m_Name: Pause Game Manager
   m_TagString: Untagged
@@ -58,6 +60,7 @@ MonoBehaviour:
   saveButton: {fileID: 2067990693043139421}
   mainMenuButton: {fileID: 2067990693086932579}
   exitDesktopButton: {fileID: 2067990692537644254}
+  mainMenuSceneName: 
   gameSettingsUiController: {fileID: 0}
 --- !u!114 &8672156221801946794
 MonoBehaviour:
@@ -72,6 +75,119 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPaused: 0
+--- !u!114 &5645484026491899258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672156221801946792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f65b2fb49e2b74ead279a8bfd74338, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clickClip: {fileID: 8300000, guid: 70e02441ad3cd8f488092b6a4933e446, type: 3}
+  bigClickClip: {fileID: 8300000, guid: 4fb135d3c45ee7343ba34122f8adc35f, type: 3}
+  cancelClip: {fileID: 8300000, guid: 0e6d4d48fef8bd34f9a18cc6b7ed156c, type: 3}
+  backClip: {fileID: 8300000, guid: 5ed9970e17bfee943a6dff056dc3a9d0, type: 3}
+--- !u!82 &8613689296241846958
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672156221801946792}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8991655405756310492, guid: d4cb3dd8c857cad4599292f12c8e37c2,
+    type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &6868583538001798803
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -79,6 +195,66 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8672156221801946793}
     m_Modifications:
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2768722436853383882, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 2813532008773375297, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_SizeDelta.x
@@ -105,6 +281,66 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: b68ad85e7013e644792dbadb4e6d0a36,
         type: 3}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2813532009745423185, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 2813532009745423186, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -235,6 +471,66 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pause Game Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916238379248, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 4891162916238379251, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -275,6 +571,66 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916307801550, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 4891162916362576961, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -295,6 +651,126 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916362576962, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162916880142925, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 4891162916880142926, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -315,6 +791,66 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 4891162917838469552, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
+      objectReference: {fileID: 0}
     - target: {fileID: 4891162917838469555, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -334,6 +870,66 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_DisabledColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0.93333334
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0.5764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0.5137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 5645484026491899258}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    - target: {fileID: 5223876251832880203, guid: 6e9b3ba67eeb5f546b748a5a267e1b90,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DaftAppleGames.Common.Ui.UiSoundManager, DaftAppleGames.Common
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6e9b3ba67eeb5f546b748a5a267e1b90, type: 3}
