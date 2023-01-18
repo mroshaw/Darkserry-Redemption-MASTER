@@ -252,12 +252,12 @@ MonoBehaviour:
   fadeInOnStart: 1
   delayBeforeScreenFadeIn: 1
   delayBeforeScreenFadeOut: 0
-  sceneFadeInDuration: 5
-  sceneFadeOutDuration: 3
+  sceneFadeInDuration: 2
+  sceneFadeOutDuration: 2
   fadeAudio: 1
   delayBeforeAudioFadeIn: 0
   delayBeforeAudioFadeOut: 0
-  audioFadeInDuration: 5
+  audioFadeInDuration: 3
   audioFadeOutDuration: 3
   audioMixer: {fileID: 24100000, guid: d4cb3dd8c857cad4599292f12c8e37c2, type: 2}
 --- !u!1 &2361960203087293736

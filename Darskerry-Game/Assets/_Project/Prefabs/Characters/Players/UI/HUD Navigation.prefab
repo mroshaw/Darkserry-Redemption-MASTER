@@ -192,7 +192,7 @@ RectTransform:
   m_GameObject: {fileID: 6811073605486372120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.03, y: 1.03, z: 1.03}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6811073605595644823}
@@ -202,7 +202,7 @@ RectTransform:
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6811073605486372127
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -556,7 +556,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -20, y: -20}
-  m_SizeDelta: {x: 180, y: 180}
+  m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 1, y: 1}
 --- !u!1 &6811073605704667410
 GameObject:
@@ -574,7 +574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &6811073605704667408
 Transform:
   m_ObjectHideFlags: 0
@@ -603,19 +603,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9990e247ae0c5c34aa5e50dde4dda409, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MapName: New_Map
+  MapName: MainGameMap
   TextureSize: 2048
   Background: {r: 0, g: 0, b: 0, a: 1}
   FitToObject: {fileID: 0}
   ObjectBoundsMultiplier: 1
   PreviewShowBounds: 1
-  PreviewBoundsColor: {r: 0, g: 0, b: 1, a: 0.3}
+  PreviewBoundsColor: {r: 0, g: 0, b: 0, a: 0.3}
   RenderCameraLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2147483647
   MapBounds:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 250, y: 50, z: 250}
+    m_Center: {x: 0, y: 1024, z: 0}
+    m_Extent: {x: 1024, y: 1024, z: 1024}
   RenderCamera: {fileID: 6811073606650242105}
   CameraRenderTexture: {fileID: 0}
   _isBusy: 0
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_BlockingObjects: 0
   m_BlockingMask:
     serializedVersion: 2
-    m_Bits: 3287801655
+    m_Bits: 66576183
 --- !u!114 &6811073605835932439
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1064,7 +1064,7 @@ MonoBehaviour:
   indicatorFadeRadius: 15
   indicatorMinFade: 0
   useMinimap: 1
-  minimapProfile: {fileID: 11400000, guid: e6d2dcd133c2fa84aaa62fa6ef6383bb, type: 2}
+  minimapProfile: {fileID: 11400000, guid: 6ffd676f947d8fd4898421ad24bfbc9a, type: 2}
   currentMinimapProfile: {fileID: 0}
   minimapMode: 1
   minimapScale: 0.25
@@ -1118,10 +1118,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Configurations:
   - _Scene:
-      _sceneAsset: {fileID: 0}
-      _path: 
+      _sceneAsset: {fileID: 102900000, guid: f38ab31fe2a947e42a8088fd815f7ac0, type: 3}
+      _path: Assets/_Project/Scenes/GameCompleteScene.unity
     _DisabledInScene: 0
-    _Config: {fileID: 11400000, guid: e5fea8903feded247ba4802c8410bf79, type: 2}
+    _Config: {fileID: 11400000, guid: 1c982ed01b1439b458288a8eeb83a16e, type: 2}
+  - _Scene:
+      _sceneAsset: {fileID: 102900000, guid: 6c87db0eac64f784dbd4b625c7aa5d18, type: 3}
+      _path: Assets/_Project/Scenes/MainMenuScene.unity
+    _DisabledInScene: 1
+    _Config: {fileID: 0}
 --- !u!1 &6811073605910815710
 GameObject:
   m_ObjectHideFlags: 0
@@ -1940,9 +1945,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6811073606650242104}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 50.1, z: 0}
+  m_LocalPosition: {x: 0, y: 2048.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 6811073605704667408}
   m_RootOrder: 0
@@ -1963,7 +1968,7 @@ Camera:
   m_FOVAxisMode: 0
   m_SensorSize: {x: 36, y: 24}
   m_LensShift: {x: 0, y: 0}
-  m_FocalLength: 50
+  m_FocalLength: 20.78461
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -1971,20 +1976,20 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 1000
-  field of view: 60
-  orthographic: 0
-  orthographic size: 250
+  far clip plane: 10000
+  field of view: 60.000004
+  orthographic: 1
+  orthographic size: 1024
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 17
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -2009,7 +2014,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   volumeAnchorOverride: {fileID: 0}
-  antialiasing: 0
+  antialiasing: 1
   SMAAQuality: 2
   dithering: 0
   stopNaNs: 0
@@ -2034,7 +2039,7 @@ MonoBehaviour:
   xrRendering: 1
   fullscreenPassthrough: 0
   allowDynamicResolution: 0
-  customRenderingSettings: 0
+  customRenderingSettings: 1
   invertFaceCulling: 0
   probeLayerMask:
     serializedVersion: 2
@@ -2050,8 +2055,8 @@ MonoBehaviour:
   materialMipBias: 0
   m_RenderingPathCustomFrameSettings:
     bitDatas:
-      data1: 72198260625768269
-      data2: 13763000477350330392
+      data1: 72127486041784141
+      data2: 13763000475202813976
     lodBias: 1
     lodBiasMode: 0
     lodBiasQualityLevel: 0
@@ -2065,8 +2070,8 @@ MonoBehaviour:
     materialQuality: 0
   renderingPathCustomFrameSettingsOverrideMask:
     mask:
-      data1: 0
-      data2: 0
+      data1: 493128782970880
+      data2: 13835058075683291136
   defaultFrameSettings: 0
   m_Version: 8
   m_ObsoleteRenderingPath: 0
