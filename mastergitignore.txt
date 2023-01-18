@@ -108,3 +108,5 @@ Grimoire.meta
 Grimoire/
 ConsolePro.meta
 ConsolePro/
+_Project/Scenes/WorkingScenes
+_Project/Scenes/WorkingScenes.meta
