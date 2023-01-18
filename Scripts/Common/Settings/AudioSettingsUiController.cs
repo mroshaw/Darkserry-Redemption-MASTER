@@ -1,8 +1,8 @@
-using DaftAppleGames.Ui;
+using DaftAppleGames.Common.Ui;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class AudioSettingsUiController : UiController
     {

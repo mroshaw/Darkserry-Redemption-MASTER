@@ -1,9 +1,10 @@
+#if ASMDEF
 #if HDRPTIMEOFDAY
 using UnityEngine;
 using UnityEngine.Events;
 using ProceduralWorlds.HDRPTOD;
 
-namespace DaftAppleGames.Environment
+namespace DaftAppleGames.Common.Environment
 {
     public class HDRPTimeOfDayHelper : MonoBehaviour
     {
@@ -130,4 +131,5 @@ namespace DaftAppleGames.Environment
        }
     }
 }
+#endif
 #endif

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class GameplaySettingsManager : MonoBehaviour, ISettings
     {

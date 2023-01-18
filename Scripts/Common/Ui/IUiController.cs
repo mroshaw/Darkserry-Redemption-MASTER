@@ -1,5 +1,5 @@
 
-namespace DaftAppleGames.Ui
+namespace DaftAppleGames.Common.Ui
 {
     /// <summary>
     /// Simple Interface for all UI controllers

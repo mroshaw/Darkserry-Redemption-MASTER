@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DaftAppleGames
+namespace DaftAppleGames.Common.Debugger
 {
     /// <summary>
     /// Simple debug behaviour to allow us to quit the game when running debug scenes.

@@ -2,18 +2,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
 
-namespace DaftAppleGames.Core.Buildings
+namespace DaftAppleGames.Common.Buildings
 {
     public class InteriorLight : MonoBehaviour
     {
-
         [Header("Light Configuration")]
         public List<Light> lights;
         public float radius = 0.025f;
         public float range = 1.0f;
         public float intensity = 30.0f;
 
-        public InteriorLightController interiorLightController;
+        [SerializeField]
+        private InteriorLightController _interiorLightController;
 
         /// <summary>
         /// Configure the Light based on settings
@@ -22,10 +22,27 @@ namespace DaftAppleGames.Core.Buildings
         {
             ConfigureLights();
 
-            if(interiorLightController)
+            if(_interiorLightController)
             {
-                interiorLightController.RegisterLight(this);
+                _interiorLightController.RegisterLight(this);
             }
+        }
+
+        /// <summary>
+        /// Set the Controller
+        /// </summary>
+        /// <param name="controller"></param>
+        internal void SetLightController(InteriorLightController controller)
+        {
+            _interiorLightController = controller;
+        }
+
+        /// <summary>
+        /// Clear the light list
+        /// </summary>
+        public void ClearLights()
+        {
+            lights.Clear();
         }
 
         /// <summary>
@@ -47,6 +64,17 @@ namespace DaftAppleGames.Core.Buildings
             foreach (Light light in lights)
             {
                 light.enabled = false;
+            }
+        }
+
+        /// <summary>
+        /// Toggle light from current state
+        /// </summary>
+        public virtual void ToggleLight()
+        {
+            foreach (Light light in lights)
+            {
+                light.enabled = !light.enabled;
             }
         }
 

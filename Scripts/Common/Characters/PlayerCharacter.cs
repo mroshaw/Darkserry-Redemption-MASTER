@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DaftAppleGames.Character
+namespace DaftAppleGames.Common.Characters
 {
     public class PlayerCharacter : Character
     {

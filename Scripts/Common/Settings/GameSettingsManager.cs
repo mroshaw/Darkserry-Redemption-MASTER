@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class GameSettingsManager : MonoBehaviour
     {

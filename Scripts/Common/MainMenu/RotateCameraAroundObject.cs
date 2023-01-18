@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DaftAppleGames.MainMenu
+namespace DaftAppleGames.Common.MainMenu
 {
     public class RotateCameraAroundObject : MonoBehaviour
     {

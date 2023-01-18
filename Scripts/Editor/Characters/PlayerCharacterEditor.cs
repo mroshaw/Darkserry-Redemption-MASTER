@@ -1,6 +1,7 @@
+#if ASMDEF
 #if INVECTOR_SHOOTER
 using System.Collections.Generic;
-using DaftAppleGames.Character;
+using DaftAppleGames.Common.Characters;
 using DaftAppleGames.Editor.Characters;
 
 using Invector;
@@ -256,4 +257,5 @@ public class PlayerCharacterEditor : OdinEditorWindow
     }
 
 }
+#endif
 #endif

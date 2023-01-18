@@ -1,3 +1,4 @@
+#if ASMDEF
 #if INVECTOR_SHOOTER
 using Invector;
 using Invector.vItemManager;
@@ -92,4 +93,5 @@ namespace DaftAppleGames.Editor.Characters
 
     }
 }
+#endif
 #endif

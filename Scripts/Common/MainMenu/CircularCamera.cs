@@ -4,7 +4,7 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEngine.UIElements;
 
-namespace DaftAppleGames.MainMenu
+namespace DaftAppleGames.Common.MainMenu
 {
 
     public class CircularCamera : MonoBehaviour

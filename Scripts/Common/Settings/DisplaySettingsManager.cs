@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class DisplaySettingsManager : MonoBehaviour, ISettings
     {

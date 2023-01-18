@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     /// <summary>
     /// Static class of methods to help with player settings

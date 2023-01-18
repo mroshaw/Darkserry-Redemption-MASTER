@@ -1,11 +1,12 @@
-using DaftAppleGames.Settings;
-using DaftAppleGames.Ui;
+using DaftAppleGames.Common.Books;
+using DaftAppleGames.Common.Settings;
+using DaftAppleGames.Common.Ui;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace DaftAppleGames.MainMenu
+namespace DaftAppleGames.Common.MainMenu
 {
     public class MainMenuUiController : UiController, IUiController
     {
@@ -27,7 +28,7 @@ namespace DaftAppleGames.MainMenu
         public Button charSelectStartGameButton;
         public Button charSelectBackButton;
         public GameObject charSelectFirstSelected;
-        
+
         [Header("Game Settings Menu")]
         public GameSettingsUiController gameSettingsUiController;
 
@@ -65,7 +66,7 @@ namespace DaftAppleGames.MainMenu
             exitToDesktopButton.onClick.AddListener(ExitToDesktop);
 
             charSelectStartGameButton.onClick.RemoveAllListeners();
-            charSelectStartGameButton.onClick.AddListener(StartGame);
+            charSelectStartGameButton.onClick.AddListener(CharSelectStartGame);
 
             charSelectBackButton.onClick.RemoveAllListeners();
             charSelectBackButton.onClick.AddListener(CharSelectBack);
@@ -75,7 +76,6 @@ namespace DaftAppleGames.MainMenu
 
             selectCallumButton.onClick.RemoveAllListeners();
             selectCallumButton.onClick.AddListener(SelectCallum);
-
         }
 
         /// <summary>
@@ -108,6 +108,19 @@ namespace DaftAppleGames.MainMenu
         }
 
         /// <summary>
+        /// Hide the Char Select UI
+        /// </summary>
+        private void HideCharSelect()
+        {
+            charSelectUi.SetActive(false);
+        }
+
+        public void StartGame()
+        {
+            _mainMenuManager.StartNewGame();
+        }
+
+        /// <summary>
         /// Handle the "Select Emily" char select button
         /// </summary>
         private void SelectEmily()
@@ -126,9 +139,10 @@ namespace DaftAppleGames.MainMenu
         /// <summary>
         /// Handle the Start Game button click
         /// </summary>
-        private void StartGame()
+        private void CharSelectStartGame()
         {
-            _mainMenuManager.StartNewGame();
+            HideCharSelect();
+            _mainMenuManager.ShowIntro();
         }
 
         /// <summary>

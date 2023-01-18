@@ -1,7 +1,8 @@
+using DaftAppleGames.Common.Utils;
 using System.Collections;
 using UnityEngine;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class PerformanceSettingsManager : MonoBehaviour, ISettings
     {

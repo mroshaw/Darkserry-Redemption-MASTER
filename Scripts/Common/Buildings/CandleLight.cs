@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DaftAppleGames.Core.Buildings
+namespace DaftAppleGames.Common.Buildings
 {
     public class CandleLight : InteriorLight
     {

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace DaftAppleGames.Character
+namespace DaftAppleGames.Common.Characters
 {
     public class Character : MonoBehaviour
     {

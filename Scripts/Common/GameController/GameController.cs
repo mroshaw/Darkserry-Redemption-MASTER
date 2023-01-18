@@ -1,10 +1,10 @@
-using DafeAppleGames.UI;
-using DaftAppleGames.UI;
+using DaftAppleGames.Common.UI;
+using DaftAppleGames.Common.Utils;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace DaftAppleGames.GameControllers
+namespace DaftAppleGames.Common.GameControllers
 {
     public enum CharSelection { Callum, Emily }
 

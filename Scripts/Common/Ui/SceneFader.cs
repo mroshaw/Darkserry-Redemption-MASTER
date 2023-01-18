@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace DaftAppleGames.UI
+namespace DaftAppleGames.Common.UI
 {
     public class SceneFader : MonoBehaviour
     {

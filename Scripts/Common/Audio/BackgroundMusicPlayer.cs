@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using Time = UnityEngine.Time;
 
-namespace DaftAppleGames.Audio
+namespace DaftAppleGames.Common.Audio
 {
     public class BackgroundMusicPlayer : MonoBehaviour
     {

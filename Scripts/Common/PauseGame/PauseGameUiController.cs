@@ -1,12 +1,12 @@
-using DaftAppleGames.GameControllers;
-using DaftAppleGames.Settings;
-using DaftAppleGames.Ui;
+using DaftAppleGames.Common.GameControllers;
+using DaftAppleGames.Common.Settings;
+using DaftAppleGames.Common.Ui;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DaftAppleGames.PauseGame
+namespace DaftAppleGames.Common.PauseGame
 {
     public class PauseGameUiController : UiController
     {
@@ -37,6 +37,9 @@ namespace DaftAppleGames.PauseGame
             base.Start();
         }
 
+        /// <summary>
+        /// Set up button control event listeners
+        /// </summary>
         private void InitControls()
         {
             // Options / Game Settings
@@ -46,6 +49,10 @@ namespace DaftAppleGames.PauseGame
             // Continue
             continueButton.onClick.RemoveAllListeners();
             continueButton.onClick.AddListener(Continue);
+
+            // Main Menu
+            mainMenuButton.onClick.RemoveAllListeners();
+            mainMenuButton.onClick.AddListener(GoToMainMenu);
 
             // Exit to Desktop
             exitDesktopButton.onClick.RemoveAllListeners();
@@ -83,7 +90,7 @@ namespace DaftAppleGames.PauseGame
         /// </summary>
         public void GoToMainMenu()
         {
-            GameController.LoadMainMenuScene();
+            _pauseGameManager.GotoMainMenu();
         }
 
         /// <summary>
@@ -94,8 +101,6 @@ namespace DaftAppleGames.PauseGame
             if(Input.GetKeyDown(pauseKey) || Input.GetKeyDown(altPauseKey))
             {
                 bool isPaused = _pauseGameManager.isPaused;
-
-                Debug.Log($"Paused: {isPaused}");
 
                 // Only pause if not paused
                 if(!isPaused)

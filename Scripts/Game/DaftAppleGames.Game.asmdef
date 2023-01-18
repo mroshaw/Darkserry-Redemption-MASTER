@@ -1,3 +1,16 @@
 {
-	"name": "DaftAppleGames.Game"
+    "name": "DaftAppleGames.Game",
+    "rootNamespace": "",
+    "references": [
+        "GUID:126bc177664c32046b746814e54da5bf"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }

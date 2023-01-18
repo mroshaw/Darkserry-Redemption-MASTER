@@ -1,10 +1,10 @@
-using DaftAppleGames.Ui;
+using DaftAppleGames.Common.Ui;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace DaftAppleGames.Settings
+namespace DaftAppleGames.Common.Settings
 {
     public class GameplaySettingsUiController : UiController
     {

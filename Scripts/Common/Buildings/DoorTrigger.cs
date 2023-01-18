@@ -1,5 +1,6 @@
 using UnityEngine;
-namespace DaftAppleGames.Core.Buildings
+
+namespace DaftAppleGames.Common.Buildings
 {
     public enum DoorTriggerLocation { Inside, Outside };
 

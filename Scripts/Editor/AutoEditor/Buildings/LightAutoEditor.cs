@@ -1,4 +1,4 @@
-using DaftAppleGames.Core.Buildings;
+using DaftAppleGames.Common.Buildings;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering.HighDefinition;
@@ -60,7 +60,7 @@ namespace DaftAppleGames.Editor.AutoEditor.Buildings
             if(interiorLightController)
             {
                 Debug.Log($"Found Interior Light Controller in scene. Adding to {gameObject.name}...\n");
-                theCandleLight.interiorLightController = interiorLightController;
+                interiorLightController.RegisterLight(theCandleLight);
             }           
 
             // Add all child Lights

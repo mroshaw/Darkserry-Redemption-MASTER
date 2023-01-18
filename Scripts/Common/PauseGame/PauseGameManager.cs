@@ -1,6 +1,7 @@
+using DaftAppleGames.Common.GameControllers;
 using UnityEngine;
 
-namespace DaftAppleGames.PauseGame
+namespace DaftAppleGames.Common.PauseGame
 {
     /// <summary>
     /// Implementation of the Pause Game functionality
@@ -27,6 +28,15 @@ namespace DaftAppleGames.PauseGame
         }
 
         /// <summary>
+        /// Load the Main Menu scene
+        /// </summary>
+        public void GotoMainMenu()
+        {
+            UnPauseGame();
+            GameController.LoadMainMenuScene();
+        }
+
+        /// <summary>
         /// Pause the game
         /// </summary>
         public void PauseGame()
@@ -35,7 +45,6 @@ namespace DaftAppleGames.PauseGame
             Time.timeScale = 0.0f;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-            Debug.Log($"Cursor should be visible!");
         }
 
         /// <summary>

@@ -1,27 +1,35 @@
 using UnityEditor;
 using UnityEngine;
-using DaftAppleGames.Core.Buildings;
+using DaftAppleGames.Common.Buildings;
+using Sirenix.OdinInspector.Editor;
 
 [CustomEditor(typeof(InteriorLightController))]
-public class InteriorLightControllerEditor : Editor
+public class InteriorLightControllerEditor : OdinEditor
 {
+    public InteriorLightController lightController;
+
     override public void OnInspectorGUI()
     {
         DrawDefaultInspector();
-        InteriorLightController myScript = target as InteriorLightController;
+        lightController = target as InteriorLightController;
         if (GUILayout.Button("All Lights On"))
         {
-            myScript.TurnOnAllLights();
+            lightController.TurnOnAllLights();
         }
 
         if (GUILayout.Button("All Lights Off"))
         {
-            myScript.TurnOffAllLights();
+            lightController.TurnOffAllLights();
         }
 
         if (GUILayout.Button("All Lights Toggle"))
         {
-            myScript.ToggleAllLights();
+            lightController.ToggleAllLights();
+        }
+
+        if (GUILayout.Button("Register All in Scene"))
+        {
+            RegisterAllInScene();
         }
 
         if (GUILayout.Button("(Re)Configure"))
@@ -29,7 +37,19 @@ public class InteriorLightControllerEditor : Editor
             Configure();
         }
     }
+
+    /// <summary>
+    /// Run the Configuration
+    /// </summary>
     private void Configure()
     {
+    }
+
+    /// <summary>
+    /// Run the Configuration
+    /// </summary>
+    private void RegisterAllInScene()
+    {
+        lightController.RegisterAllLightsInScene();
     }
 }

@@ -1,13 +1,18 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+#if ASMDEF
 #if ENVIRO_3
 using Enviro;
 #endif
+#endif
+
+#if ASMDEF
 #if HDRPTIMEOFDAY
 
 #endif
-namespace DaftAppleGames.Environment
+#endif
+namespace DaftAppleGames.Common.Environment
 {
     [ExecuteInEditMode]
     public class WeatherSyncManager : MonoBehaviour
@@ -36,14 +41,17 @@ namespace DaftAppleGames.Environment
         [Header("Vegetation")]
         public Material[] vegetationMaterials;
 
+#if ASMDEF
 #if HDRPTIMEOFDAY
         private HDRPTimeOfDayHelper _hdrpTodHelper;
+#endif
 #endif
         private void Start()
         {
 
             SetSnow(minSnow);
             SetWet(minWet);
+#if ASMDEF
 #if HDRPTIMEOFDAY
             _hdrpTodHelper = FindObjectOfType<HDRPTimeOfDayHelper>();
             if (_hdrpTodHelper)
@@ -62,6 +70,7 @@ namespace DaftAppleGames.Environment
 
                 }
             }
+#endif
 #endif
         }
 
@@ -85,6 +94,7 @@ namespace DaftAppleGames.Environment
             }
 
             // Enviro
+#if ASMDEF
 #if ENVIRO_3
             if (EnviroManager.instance == null || EnviroManager.instance.Environment == null)
             {
@@ -112,9 +122,12 @@ namespace DaftAppleGames.Environment
                 Shader.SetGlobalVector("_Global_WetnessParams", new Vector2(_minWetness, currWetness));
             }
 #endif
-            // HDRP Time of Day
+#endif
+// HDRP Time of Day
+#if ASMDEF
 #if HDRPTIMEOFDAY
 
+#endif
 #endif
         }
 

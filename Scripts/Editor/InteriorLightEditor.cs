@@ -1,6 +1,6 @@
 using UnityEditor;
 using UnityEngine;
-using DaftAppleGames.Core.Buildings;
+using DaftAppleGames.Common.Buildings;
 
 [CustomEditor(typeof(InteriorLight), true)]
 public class InteriorLightEditor : Editor

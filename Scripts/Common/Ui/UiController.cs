@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 
-namespace DaftAppleGames.Ui
+namespace DaftAppleGames.Common.Ui
 {
     public class UiController : MonoBehaviour
     {

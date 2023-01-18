@@ -1,35 +1,48 @@
+#if ASMDEF
 #if ENVIRO_3
 using Enviro;
 #endif
-using DaftAppleGames.Environment;
+#endif
+using DaftAppleGames.Common.Environment;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace DaftAppleGames.Core.Buildings
+namespace DaftAppleGames.Common.Buildings
 {
     public class InteriorLightController : MonoBehaviour
     {
+        [Header("Startup Settings")]
+        public bool findAllLightsOnStartup = true;
+        private InteriorLight[] _allLightsInScene;
+
         [Header("Time Control")]
         public int[] onHours;
         public int[] offHours;
 
+        [SerializeField]
         [Header("Interior Lights")]
-        public List<InteriorLight> interiorLights = new();
+        private List<InteriorLight> _interiorLights = new();
+
+#if ASMDEF
 #if HDRPTIMEOFDAY_
         private HDRPTimeOfDayHelper _hdrpTodHelper;
+#endif
 #endif
         /// <summary>
         /// Set up the Controller
         /// </summary>
         private void Start()
         {
+            #if ASMDEF
 #if ENVIRO_3
             // Subscribe to the Enviro OnHOurPassed event
             EnviroManager.instance.Events.Settings.onHourPassedActions.AddListener(HourPassedLightUpdate);
 #endif
+#endif
 
+#if ASMDEF
 #if HDRPTIMEOFDAY_
             _hdrpTodHelper = FindObjectOfType<HDRPTimeOfDayHelper>();
             if(_hdrpTodHelper)
@@ -37,8 +50,27 @@ namespace DaftAppleGames.Core.Buildings
                 _hdrpTodHelper.OnHourPassed.AddListener(HourPassedLightUpdate);
             }
 #endif
+#endif
         }
 
+        /// <summary>
+        /// Populate the internal list of scene lights
+        /// </summary>
+        private void GetAllLightsInScene(Boolean forceRefresh = false)
+        {
+            if(_allLightsInScene.Length == 0 || forceRefresh)
+            {
+                _allLightsInScene = FindObjectsOfType<InteriorLight>(true);
+            }
+        }
+
+        /// <summary>
+        /// Clears the Light List
+        /// </summary>
+        private void ClearLightList()
+        {
+            _interiorLights.Clear();
+        }
 
         /// <summary>
         /// Public method to register a new Interior Light to the controller
@@ -46,7 +78,8 @@ namespace DaftAppleGames.Core.Buildings
         /// <param name="interiorLight"></param>
         public void RegisterLight(InteriorLight interiorLight)
         {
-            interiorLights.Add(interiorLight);
+            _interiorLights.Add(interiorLight);
+            interiorLight.SetLightController(this);
         }
 
         /// <summary>
@@ -54,6 +87,7 @@ namespace DaftAppleGames.Core.Buildings
         /// </summary>
         private void HourPassedLightUpdate()
         {
+#if ASMDEF
 #if ENVIRO_3
             if(onHours.Contains(EnviroManager.instance.Time.hours))
             {
@@ -64,7 +98,8 @@ namespace DaftAppleGames.Core.Buildings
                 TurnOnAllLights();
             }
 #endif
-
+#endif
+#if ASMDEF
 #if HDRPTIMEOFDAY_
             if (onHours.Contains(_hdrpTodHelper.currentHour))
             {
@@ -75,6 +110,7 @@ namespace DaftAppleGames.Core.Buildings
                 TurnOnAllLights();
             }
 #endif
+#endif
         }
 
         /// <summary>
@@ -82,7 +118,7 @@ namespace DaftAppleGames.Core.Buildings
         /// </summary>
         public void TurnOnAllLights()
         {
-            foreach (InteriorLight interiorLight in interiorLights)
+            foreach (InteriorLight interiorLight in _interiorLights)
             {
                 interiorLight.TurnOnLight();
             }
@@ -90,16 +126,37 @@ namespace DaftAppleGames.Core.Buildings
 
         public void TurnOffAllLights()
         {
-            foreach(InteriorLight interiorLight in interiorLights)
+            foreach(InteriorLight interiorLight in _interiorLights)
             {
                 interiorLight.TurnOffLight();
             }
         }
 
+        /// <summary>
+        /// Find and register all lights in Scene
+        /// </summary>
+        public void RegisterAllLightsInScene()
+        {
+            ClearLightList();
+            GetAllLightsInScene();
 
+            foreach(InteriorLight light in _allLightsInScene)
+            {
+                RegisterLight(light);
+            }
+        }
+
+        /// <summary>
+        /// Toggle the state of all lights
+        /// </summary>
         public void ToggleAllLights()
         {
+            InteriorLight[] allLightsInScene = FindObjectsOfType<InteriorLight>(true);
 
+            foreach (InteriorLight light in allLightsInScene)
+            {
+                light.ToggleLight();
+            }
         }
     }
 }

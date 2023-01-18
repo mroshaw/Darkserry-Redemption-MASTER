@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace DafeAppleGames.UI
+namespace DaftAppleGames.Common.UI
 {
     /// <summary>
     /// Static class to allow scene name to pass between scenes

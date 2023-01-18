@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DaftAppleGames.MainMenu
+namespace DaftAppleGames.Common.MainMenu
 {
     public class CameraAnimAfterDelay : MonoBehaviour
     {
