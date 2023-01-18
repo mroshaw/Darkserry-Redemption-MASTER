@@ -20,7 +20,7 @@ MonoBehaviour:
     defaultDistance: 2.3
     maxDistance: 12
     minDistance: 0.6
-    height: 1.99
+    height: 1.6
     smooth: 10
     smoothDamp: 6
     xMouseSensitivity: 2
@@ -266,7 +266,7 @@ MonoBehaviour:
     defaultDistance: 1.5
     maxDistance: 3
     minDistance: 0.5
-    height: 2
+    height: 0
     smooth: 10
     smoothDamp: 0
     xMouseSensitivity: 3
@@ -282,4 +282,4 @@ MonoBehaviour:
     useZoom: 0
     fixedAngle: {x: 0, y: 0}
     lookPoints: []
-    cameraMode: 1
+    cameraMode: 0
