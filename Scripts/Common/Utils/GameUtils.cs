@@ -1,3 +1,8 @@
+#if ASMDEF
+#if INVECTOR_SHOOTER
+using Invector.vCamera;
+#endif
+#endif
 using UnityEngine;
 
 namespace DaftAppleGames.Common.Utils
@@ -26,11 +31,35 @@ namespace DaftAppleGames.Common.Utils
             GameObject playerGameObject = GameObject.FindGameObjectWithTag("Player");
             if (!playerGameObject)
             {
-                Debug.LogError("GameUtils.FindPlayerGameObject: Can't find 'Player' game object!");
+                // Debug.LogError("GameUtils.FindPlayerGameObject: Can't find 'Player' game object!");
                 return null;
             }
 
             return playerGameObject;
         }
+
+        public static GameObject FindInvectorCameraGameObject()
+        {
+            GameObject vCameraGameObject = null;
+
+#if ASMDEF
+#if INVECTOR_SHOOTER
+            vThirdPersonCamera vCamera = GameObject.FindObjectOfType<vThirdPersonCamera>();
+
+            if (vCamera)
+            {
+                vCameraGameObject = GameObject.FindObjectOfType<vThirdPersonCamera>().gameObject;
+            }
+            if (!vCameraGameObject)
+            {
+                // Debug.LogError("GameUtils.FindPlayerGameObject: Can't find 'Invector Camera' game object!");
+                return null;
+            }
+#endif
+#endif
+
+            return vCameraGameObject;
+        }
+
     }
 }
