@@ -6,14 +6,154 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Project/Scenes/MainMenuScene.unity
+    path: Assets/_Project/Scenes/Game Scenes/MainMenuScene.unity
     guid: 6c87db0eac64f784dbd4b625c7aa5d18
   - enabled: 1
-    path: Assets/_Project/Scenes/GameWorldScene.unity
-    guid: 0cea2bb8a42b0364881b376e67222947
+    path: Assets/_Project/Scenes/Game Scenes/Streaming/Main Scene/MainStreamScene.unity
+    guid: beb0b3fdad3aacf40a32928bd2431716
   - enabled: 1
-    path: Assets/_Project/Scenes/LoadingScene.unity
+    path: Assets/_Project/Scenes/Game Scenes/LoadingScene.unity
     guid: b5ff09427ea489b47b11c209178bc033
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-3_z-3.unity
+    guid: 5b3f2fa1d17350c4688edbfd50209429
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-3_z-2.unity
+    guid: ea595342757d4d143b700510cbcdb8ec
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-3_z0.unity
+    guid: 59610f7d0f790ab49aeb04b09884ca14
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-3_z1.unity
+    guid: 89667e7182310e84c87cd6fcafdeaea5
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-2_z-3.unity
+    guid: c44e1920ad1610044aa76ec9093fc60d
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-2_z-2.unity
+    guid: 41d7820f47c289d469738736e81b8bd2
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-2_z0.unity
+    guid: 50499a49072326a40a8c925dbf3b1efd
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x-2_z1.unity
+    guid: 782ce3ccbcadf144995cb800e298bcaa
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x0_z-3.unity
+    guid: 4574f6a761397104484ae86d023a3281
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x0_z-2.unity
+    guid: 71bb6b3d0b3e8f94c86884d407663e1b
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x0_z0.unity
+    guid: ae4ede657b88b8a4db09b8dfe1783ead
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x0_z1.unity
+    guid: 3e193e0032faff744bc8e53f78efcd63
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x1_z-3.unity
+    guid: 9d840737bcbd08248aa7e1c149af9e05
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x1_z-2.unity
+    guid: 7f5a39cab4610574b8b6ded1d63e9399
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x1_z0.unity
+    guid: c6cdc98b24c276549849fb4c3b270f4c
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain HQ/Scene
+      Terrain HQ_x1_z1.unity
+    guid: 85ca2518545496345b20fc61714b8663
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-2_z1.unity
+    guid: c2a29bb311c49ab48b782e18365630bc
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-3_z-2.unity
+    guid: 7415ef49018240b4dadcaf91074aff7f
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x0_z1.unity
+    guid: 530fd0770a335ca49961d138cc37161e
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x1_z0.unity
+    guid: e7bf6c466edd556488806e6dd4123918
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x0_z-2.unity
+    guid: 71ede4f3d28564d489430ed9c065f5b4
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x0_z-3.unity
+    guid: 07bb7f666fd7dd343874fda305831b64
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-3_z0.unity
+    guid: 9dac1647edb9ada49a5cedb9aa968a1e
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-2_z-2.unity
+    guid: 8c5d125f5a784f842acb16f4c1c7d32e
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-3_z-3.unity
+    guid: 2eb17e132469c6148a69fc2a916cf22f
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x1_z-2.unity
+    guid: c855767f37efcdf4ca821175bc2f5915
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-3_z1.unity
+    guid: 08f281dc2e5977e48a4a014a945b0dbe
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-2_z0.unity
+    guid: 94055afc80c7cad4a809aada6e618454
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x1_z-3.unity
+    guid: 46bf8fbfc685fba4598817be6097c225
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x-2_z-3.unity
+    guid: 12617ea77c2db854c83eb397035827a2
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x0_z0.unity
+    guid: 3fecec694f4fa5a4c8dd5b0085959fc0
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Terrain LQ/Scene
+      Terrain LQ_x1_z1.unity
+    guid: 251e1d44523516a439b7bc3390d13c4f
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Large Object/Scene
+      Large Object_x1_z-1.unity
+    guid: 87df8c9a9e1dce845b1262895d813d1c
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Small Object/Scene
+      Small Object_x0_z0.unity
+    guid: ebb77becaa1eed047b9585ece6b122b2
+  - enabled: 1
+    path: Assets/_Project/WorldStreamer/SplitScenesGameWorldScene/Scene Large Object/Scene
+      Large Object_x0_z0.unity
+    guid: f28c6f1d8d204cd4ea20a30b7084180d
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 4acde1fec4a342b44828b40249851f83,
       type: 2}
