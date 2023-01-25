@@ -3,6 +3,7 @@
 using DaftAppleGames.Common.GameControllers;
 using echo17.EndlessBook;
 using Invector.vCamera;
+using Invector.vCharacterController;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -26,13 +27,14 @@ namespace DaftAppleGames.Common.Books
         private GameObject _bookControllerGameObject;
         private GameObject _cameraGameObject;
         private vThirdPersonCamera _vCamera;
+        private vThirdPersonInput _vThirdPersonInput;
 
         private bool _isShown;
 
         private StateChangedDelegate onStateCompleted;
 
         // Start is called before the first frame update
-        private void Start()
+        private void Awake()
         {
             _bookControllerGameObject = bookController.gameObject;
             _bookControllerGameObject.SetActive(false);
@@ -40,7 +42,17 @@ namespace DaftAppleGames.Common.Books
             _isShown = false;
 
             _cameraGameObject = GameController.GetMainCameraGameObject();
-            _vCamera = _cameraGameObject.GetComponentInParent<vThirdPersonCamera>();
+            GameObject vCameraGameObject = GameController.GetInvectorCameraGameObject();
+            if(vCameraGameObject)
+            {
+                _vCamera = vCameraGameObject.GetComponent<vThirdPersonCamera>();
+            }
+
+            GameObject playerGameObject = GameController.GetPlayerGameObject();
+            if(playerGameObject)
+            {
+                _vThirdPersonInput = playerGameObject.GetComponent<vThirdPersonInput>();
+            }
 
             onStateCompleted = HideBookGameObjectDelegate;
         }
@@ -50,11 +62,22 @@ namespace DaftAppleGames.Common.Books
         /// </summary>
         public void ShowBook()
         {
+            if(!_vCamera)
+            {
+                _vCamera = GameController.GetInvectorCameraGameObject().GetComponent<vThirdPersonCamera>();
+            }
+
+            if(!_vThirdPersonInput)
+            {
+                _vThirdPersonInput = GameController.GetPlayerGameObject().GetComponent<vThirdPersonInput>();
+            }
+
             _vCamera.FreezeCamera();
-            BringBookToCamera();
+            _vThirdPersonInput.enabled = false;
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
             _bookControllerGameObject.SetActive(true);
+            bookController.MoveBookToCamera();
             _isShown = true;
         }
 
@@ -73,6 +96,8 @@ namespace DaftAppleGames.Common.Books
         {
             Cursor.lockState = CursorLockMode.Locked;
             _vCamera.UnFreezeCamera();
+
+            _vThirdPersonInput.enabled = true;
             _isShown = false;
             _bookControllerGameObject.SetActive(false);
         }
@@ -122,17 +147,6 @@ namespace DaftAppleGames.Common.Books
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Brings the book up to the camera
-        /// </summary>
-        private void BringBookToCamera()
-        {
-            Vector3 newPosition = _cameraGameObject.transform.position + (_cameraGameObject.transform.forward * 0.5f);
-            Quaternion newRotation = _cameraGameObject.transform.rotation * Quaternion.Euler(270.0f, 0, 0.0f);
-            _bookControllerGameObject.transform.position = newPosition;
-            _bookControllerGameObject.transform.rotation = newRotation;
         }
     }
 }

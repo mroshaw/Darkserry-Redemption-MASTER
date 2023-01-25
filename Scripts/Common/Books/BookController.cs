@@ -73,7 +73,7 @@ namespace DaftAppleGames.Common.Books
         /// <summary>
         /// Configure the book
         /// </summary>
-        void Start()
+        void Awake()
         {
             // Initialise the book
             _book = GetComponent<EndlessBook>();
@@ -110,31 +110,6 @@ namespace DaftAppleGames.Common.Books
             // set the book closed
             _book.SetState(EndlessBook.StateEnum.ClosedFront, 1.0f, onCompleted);
         }
-
-        /// <summary>
-        /// Test method
-        /// </summary>
-        public void TestFirstOpen()
-        {
-            Debug.Log("First Open Event");
-        }
-
-        /// <summary>
-        /// Test method
-        /// </summary>
-        public void TestOpen()
-        {
-            Debug.Log("Open Event");
-        }
-
-        /// <summary>
-        /// Test method
-        /// </summary>
-        public void TestClosed()
-        {
-            Debug.Log("Closed Event");
-        }
-
 
         /// <summary>
         /// Called when the book's state changes
@@ -179,7 +154,8 @@ namespace DaftAppleGames.Common.Books
                     if (fromState != EndlessBook.StateEnum.OpenMiddle)
                     {
                         // play open sound
-                        _audioSource.PlayOneShot(bookOpenSound);
+                        //_audioSource.PlayOneShot(bookOpenSound);
+                        _audioSource.PlayOneShot(pageTurnSound);
                     }
                     else
                     {
@@ -195,12 +171,22 @@ namespace DaftAppleGames.Common.Books
                     break;
 
                 case EndlessBook.StateEnum.OpenFront:
+                    if(fromState == EndlessBook.StateEnum.ClosedFront)
+                    {
+                        _audioSource.PlayOneShot(bookOpenSound);
+                    }
+                    else
+                    {
+                        _audioSource.PlayOneShot(pageTurnSound);
+                    }
+                    break;
                 case EndlessBook.StateEnum.OpenBack:
 
                     // play the open sound
-                    _audioSource.PlayOneShot(bookOpenSound);
+                    // _audioSource.PlayOneShot(bookOpenSound);
+                    _audioSource.PlayOneShot(pageTurnSound);
 
-                    if(!_bookOpened)
+                    if (!_bookOpened)
                     {
                         _bookOpened = true;
                         OnBookFirstOpen.Invoke();
@@ -727,7 +713,7 @@ namespace DaftAppleGames.Common.Books
         /// <summary>
         /// Brings the book up to the camera
         /// </summary>
-        private void MoveBookToCamera()
+        public void MoveBookToCamera()
         {
             Vector3 newPosition = _mainCameraGameObject.transform.position + (_mainCameraGameObject.transform.forward * distanceFromCamera);
             Quaternion newRotation = _mainCameraGameObject.transform.rotation * Quaternion.Euler(270.0f, 0, 0.0f);
