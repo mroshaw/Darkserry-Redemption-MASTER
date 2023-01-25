@@ -7,9 +7,11 @@ namespace DaftAppleGames.Common.MainMenu
 {
     public class MainMenuManager : MonoBehaviour
     {
+#if ASMDEF
 #if BOOK
         [Header("Intro Settings")]
         public BookController introBookController;
+#endif
 #endif
         /// <summary>
         /// Initialise setting controllers
@@ -26,8 +28,10 @@ namespace DaftAppleGames.Common.MainMenu
         /// </summary>
         public void ShowIntro()
         {
+#if ASMDEF
 #if BOOK
             introBookController.gameObject.SetActive(true);
+#endif
 #endif
         }
 

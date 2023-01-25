@@ -1,3 +1,4 @@
+#if ASMDEF
 #if INVECTOR_SHOOTER
 using DaftAppleGames.Common.GameControllers;
 using Invector.vCamera;
@@ -5,20 +6,17 @@ using UnityEngine;
 
 namespace DaftAppleGames.Common.Characters
 {
-
-
-
     public class AddMainCamera : MonoBehaviour
     {
-
         private vThirdPersonCamera vCamera;
+        private GameObject _mainCameraGameObject;
         /// <summary>
         /// Add the Main Camera game object as a child
         /// </summary>
         private void Start()
         {
-            GameObject cameraGameObject = GameController.GetMainCameraGameObject();
-            if (!cameraGameObject)
+            _mainCameraGameObject = GameController.GetMainCameraGameObject();
+            if (!_mainCameraGameObject)
             {
                 Debug.LogError("AddMainCamera: Can't find 'MainCamera' game object!!!");
                 return;
@@ -32,11 +30,20 @@ namespace DaftAppleGames.Common.Characters
                 return;
             }
 
-            cameraGameObject.transform.SetParent(transform, false);
-            cameraGameObject.transform.localPosition = new Vector3(0, 0, 0);
-            cameraGameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+            // Update the main camera
+            UpdateMainCamera();
         }
 
+        /// <summary>
+        /// Set the Main Camera as child
+        /// </summary>
+        public void UpdateMainCamera()
+        {
+            _mainCameraGameObject.transform.SetParent(transform, false);
+            _mainCameraGameObject.transform.localPosition = new Vector3(0, 0, 0);
+            _mainCameraGameObject.transform.localRotation = new Quaternion(0, 0, 0, 0);
+        }
     }
 }
+#endif
 #endif

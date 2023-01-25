@@ -1,8 +1,14 @@
 using DaftAppleGames.Common.UI;
-using DaftAppleGames.Common.Utils;
+#if ASMDEF
+#if INVECTOR_SHOOTER
+using Invector.vCamera;
+#endif
+#endif
+
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using DaftAppleGames.Common.Utils;
 
 namespace DaftAppleGames.Common.GameControllers
 {
@@ -23,6 +29,15 @@ namespace DaftAppleGames.Common.GameControllers
         [Header("Camera")]
         [SerializeField]
         private static GameObject _mainCameraGameObject;
+
+        [SerializeField]
+        private static GameObject _vCameraGameObject;
+
+        [Header("Player")]
+
+        [SerializeField]
+
+        private static GameObject _playerGameObject;
 
         [Header("Scene Fader")]
         private static SceneFader _sceneFader;
@@ -47,6 +62,8 @@ namespace DaftAppleGames.Common.GameControllers
             }
 
             SetCameraGameObject();
+            SetInvectorCameraGameObject();
+            SetPlayerGameObject();
             SetSceneFader();
         }
 
@@ -90,6 +107,16 @@ namespace DaftAppleGames.Common.GameControllers
             _mainCameraGameObject = GameUtils.FindMainCameraGameObject();
         }
 
+        private static void SetInvectorCameraGameObject()
+        {
+            _vCameraGameObject = GameUtils.FindInvectorCameraGameObject();
+        }
+
+        private static void SetPlayerGameObject()
+        {
+            _playerGameObject = GameUtils.FindPlayerGameObject();
+        }
+
         public static void LoadSceneWithFadeOut(string sceneName)
         {
             _instance.StartCoroutine(LoadSceneWithFadeOutAsync(sceneName));
@@ -121,6 +148,25 @@ namespace DaftAppleGames.Common.GameControllers
                 SetCameraGameObject();
             }
             return _mainCameraGameObject;
+        }
+
+        public static GameObject GetInvectorCameraGameObject()
+        {
+            if (!_vCameraGameObject)
+            {
+                SetInvectorCameraGameObject();
+            }
+            return _vCameraGameObject;
+        }
+
+
+        public static GameObject GetPlayerGameObject()
+        {
+            if (!_playerGameObject)
+            {
+                SetPlayerGameObject();
+            }
+            return _playerGameObject;
         }
 
         /// <summary>
